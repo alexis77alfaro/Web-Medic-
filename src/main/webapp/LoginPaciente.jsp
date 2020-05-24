@@ -19,21 +19,20 @@
     <body>
         <div class="container col-lg-3">
 
-            <form method="" id="frmLogin">
+            <form method="post" action="ServeltPaciente">
              <div class="form-group text-center">
                  <p><strong>Iniciar Seción</strong></p>
              </div>  
              <div class="form-group text-center">
                  <label>Correo Electronico</label>
-                 <input type="text" placeholder="usuario@gmail.com" class="form-control">
+                 <input type="text" placeholder="usuario@gmail.com" name="txtCorreo" class="form-control">
              </div>
 
              <div class ="form-group text-center">
                  <label>Contraseña</label>
-                 <input type="password" placeholder="**********" class="form-control">
+                 <input type="password" placeholder="**********" name="txtPass" class="form-control">
              </div> 
-               <input type="button" value="Ingresar"  class="btn btn-info btn-block">
-               <input type="hidden" name="accion" value="login">
+               <input type="submit" value="Ingresar" class="btn btn-info btn-block">
             </form>
                 <br>
                 <a href="index.jsp" style="position: relative; top: -2px; left: 20px;">Cancelar</a>

@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>PacienteControler</servlet-name>
+  	<display-name>PacienteControler</display-name>
+  	<description></description>
+  	<servlet-class>Controler.PacienteControler</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeltPaciente</servlet-name>
+  	<display-name>ServeltPaciente</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltPaciente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PacienteControler</servlet-name>
+  	<url-pattern>/PacienteControler</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltPaciente</servlet-name>
+  	<url-pattern>/ServeltPaciente</url-pattern>
+  </servlet-mapping>
 </web-app>
