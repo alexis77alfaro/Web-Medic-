@@ -37,8 +37,8 @@
 		<div class="logIn">
 			<img src="img/usuario.png">
 			<div class="opcLogIn">
-				<a href="">Iniciar Sesión</a>
-				<a href="">Registrarme</a>
+				<a href="LoginPaciente.jsp">Iniciar Sesión</a>
+				<a href="RegistrarPaciente.jsp">Registrarme</a>
 			</div>
 		</div>
 	</header>
