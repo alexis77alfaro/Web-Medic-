@@ -1,0 +1,123 @@
+.head{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	background-color: #77d8d8;
+}
+
+.head .logo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 23%;
+	margin: 0;
+}
+
+.head .logo img{
+	width: 30%;
+}
+
+.head .logo span{
+	margin: 5px;
+	font-weight: bold;
+	font-size: 34px;
+	letter-spacing: 3px;
+	color: #000;
+}
+
+.head .logo span:hover{
+	cursor: default;
+}
+
+.head .menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+	margin: 0;
+}
+
+.head .menu ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+.head .menu ul li{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.head .menu ul hr{
+	border: none;
+	border-left: 1px solid #000;
+	height: 25px;
+	width: 1px;
+}
+
+.head .menu ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+	color: #000;
+}
+
+.head .menu ul li a:hover{
+	background-color: #4cbbb9;
+	border-radius: 10px;
+	padding: 10px;
+	color: #FFF;
+}
+
+.head .logIn{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	margin: 15px;
+	padding: 2px;
+	background-color: #4cbbb9;
+	border-radius: 10px;
+}
+
+.head .logIn img{
+	width: 23%;
+}
+
+.head .logIn .opcLogIn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 65%;
+	margin: 5px;
+	margin-top: 0;
+	padding: 5px;
+}
+
+.head .logIn .opcLogIn a{
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #0779e4;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+	letter-spacing: 1px;
+	color: #000;
+	width: 95%;
+}
+
+.head .logIn .opcLogIn a:hover{
+	background-color: #eff3c6;
+	color: #000;
+}
