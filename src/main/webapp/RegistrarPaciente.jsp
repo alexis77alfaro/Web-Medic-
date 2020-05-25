@@ -42,7 +42,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="">Mi Perfil</a>
+					<a href="miPerfilPct.jsp">Mi Perfil</a>
 				</li>
 				<hr>
 				<li>
