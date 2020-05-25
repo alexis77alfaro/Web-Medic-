@@ -4,7 +4,9 @@
         <script src="Js/jquery-1.4.2.min.js" type="text/javascript"></script>
         <script src="Js/RegistrarClientes.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+		<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <title>Registro de Cliente</title>
     </head>
     <style>
@@ -20,7 +22,43 @@
         }
     </style>
     <body>
-        <div class="container col-lg-4" style="opacity: 0.9">
+    	<header class="head">
+		<div class="logo">
+			<img src="img/wm_logo2.png">
+			<span>Web Medic</span>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>
+					<a href="">Mi Perfil</a>
+				</li>
+				<hr>
+				<li>
+					<a href="">Servicios</a>
+				</li>
+				<hr>
+				<li>
+					<a href="">Buscar</a>
+				</li>
+				<hr>
+				<li>
+					<a href="">¡Quienes somos?</a>
+				</li>
+				<hr>
+				<li>
+					<a href="">Creditos</a>
+				</li>
+			</ul>
+		</div>
+		<div class="logIn">
+			<img src="img/usuario.png">
+			<div class="opcLogIn">
+				<a href="LoginPaciente.jsp">Iniciar Sesion</a>
+				<a href="RegistrarPaciente.jsp">Registrarme</a>
+			</div>
+		</div>
+	</header>
+        <div class="container col-lg-4" style="opacity: 0.9; margin-bottom:60px;">
             <form action="ServeltPaciente" method="Post">
                 <div class="form-group text-center">
                  <h5>Registro de Pacientes</h5>
@@ -95,6 +133,44 @@
             <a href="index.jsp"> Cancelar </a>
 
         </div>
+    <div class="footer">
+        <div class="footer-contenido">
+            <div class="footer-seccion sobre">
+                <h1 class="logo-text"><span id="SU">Clinic</span><span>Web</span></h1>
+                <p>
+                  Somos una clinica, la cual ofrece diferentes servicios medicos, tambien contamos con diferentes especialidades <br>
+                  -psiquiatria <br>
+                  -Cardiologia <br>
+                  -Reumatologia <br>
+                  -Pediatria
+                </p>
+              
+                
+               
+            </div>
+            <div class="footer-seccion contacto">
+                <h2>Contactanos</h2>
+             <br>
+             <div class="contacto">
+                <span><i class="fas fa-phone"></i> &nbsp;(+503)5869-4815</span><br> <br>
+                <span><i class="fas fa-envelope"></i> &nbsp;Info@clinicweb.com</span><br> <br>
+                <span><i class="fas fa-map-marker-alt"></i>&nbsp; Avenida salchipapa</span>
+            </div>
+            </div>
+            <div class="footer-seccion-redes">
+                <h2>Siguenos en Nuestras redes</h2>
+                <br>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+            <div class="footer-bottom">
+                &copy;2020,Todos los derechos reservados | Clinic Web
+            </div>
+        
+    </div>
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

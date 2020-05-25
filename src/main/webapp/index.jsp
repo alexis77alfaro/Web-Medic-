@@ -86,7 +86,6 @@
 			</p>
 		</div>
 	</div>
-	 <!-- footer -->
 	 <div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">
@@ -125,7 +124,5 @@
             </div>
         
     </div>
-<!-- //footer -->
-
 </body>
 </html>
