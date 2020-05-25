@@ -54,11 +54,11 @@
 				</li>
 				<hr>
 				<li>
-					<a href="">¡Quienes somos?</a>
+					<a href="">¿Quienes somos?</a>
 				</li>
 				<hr>
 				<li>
-					<a href="">Creditos</a>
+					<a href="creditos.jsp">Creditos</a>
 				</li>
 			</ul>
 		</div>

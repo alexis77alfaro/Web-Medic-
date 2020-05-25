@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Web Medic</title>
+	<link rel="stylesheet" type="text/css" href="css/creditosStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/indexStyle.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
@@ -28,7 +29,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="miPerfilPct.jsp">Mi Perfil</a>
+					<a href="">Mi Perfil</a>
 				</li>
 				<hr>
 				<li>
@@ -49,57 +50,41 @@
 			</ul>
 		</div>
 	</header>
-	<div class="content">
-		<div class="anuncio">
-			<h5>Ante la emergencia del COVID-19<br>¡Cuídate, eres lo más importante para nosotros!</h5>
-			<div class="logIn">
-<!--				<span>¿Eres nuevo? ¡Regístrate! &#x279E;</span> -->
-				<a href="RegistrarPaciente.jsp">REGISTRARME</a>
-<!--				<span>Si ya estás registrado, Inicia Sesión &#x279E;</span> -->
-				<a href="LoginPaciente.jsp">INICIAR SESIÓN</a>
-			</div>
-		</div>
-		<div class="principal">
-			<div class="item">
-				<div class="circle">
-					<img src="img/buscar.png">
-				</div>
-				<span>BUSCA</span>
-				<p>Busca al especialista en la salud que necesites.</p>
-			</div>
-			<div class="item">
-				<div class="circle">
-					<img src="img/agenda.png">
-				</div>
-				<span>AGENDA</span>
-				<p>Agenda la cita medica a tu propia conveniencia</p>
-			</div>
-			<div class="item">
-				<div class="circle">
-					<img src="img/agenda2.png">
-				</div>
-				<span>CONFIRMA</span>
-				<p>Recibiras la confirmacion de la cita medica.</p>
-			</div>
-		</div>
-		<div class="inf">
-			<h1>Web Medic</h1>
-			<h2>Tenemos el sistema informatico apropiado para ti.</h2>
-			<p>
-				Somos expertos en el area informatica y ofrecemos la posibilidad de
-				acercarte la solucion medica que necesitas.
-			</p>
-		</div>
-		<div class="rotulo">
-			<div class="rItems">
-				<h2>¿QUÉ TE OFRECEMOS?</h2>
-				<p>
-					WEB MEDIC ES UN SISTEMA INFORMÁTICO DISEÑADO PARA ESTE HOSPITAL CON LA FINALIDAD DE AUTOMATIZAR EL PROCESO DE LA AGENDA DE CITAS MÉDICAS, PROPORCIONANDO UNA MANERA SENCILLA Y EFICAZ DE LLEVAR A CABO ÉSTE PROCESO CON EL FIN DE DIRIGIR LA MÁXIMA ATENCIÓN A LO QUE DE VERDAD ES IMPORTANTE: NUESTROS CLIENTES.
-				</p>
-			</div>
+		<div class="content">
+		<div class="tablaCreditos">
+			<table class="creditos">
+			<thead>
+				<tr>
+					<th>
+						Recurso
+					</th>
+					<th>
+						Crédito
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<img src="img/electrocardiogramHD.jpg">
+					</td>
+					<td>
+						Imagen de <a href="https://pixabay.com/es/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Gerd Altmann</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Pixabay</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="img/fondoMdc3.jpg">
+					</td>
+					<td>
+						Imagen de <a href="https://pixabay.com/es/users/voltamax-60363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Yerson Retamal</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Pixabay</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 		</div>
 	</div>
-	 <div class="footer">
+	<div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">
                 <h1 class="logo-text"><span id="SU">Clinic</span><span>Web</span></h1>

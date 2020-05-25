@@ -75,6 +75,7 @@ public class ServeltPaciente extends HttpServlet {
 				 * que el usuario efectivamente ha iniciado sesión.*/
 				HttpSession validado = request.getSession(true);
 				validado.setAttribute("correoUser", correo);
+				response.sendRedirect("miPerfilPct.jsp");
 			}else {
 				System.out.println("Datos invalidos");
 			}
@@ -83,7 +84,7 @@ public class ServeltPaciente extends HttpServlet {
 		   
 		   //--Insercion de pacientes
 		   
-		   
+/*		   
 		   String nombresP=request.getParameter("txtnombres");
 		   String apellidosP=request.getParameter("txtapellidos");
 		   String edadP=request.getParameter("txtedad");
@@ -101,6 +102,8 @@ public class ServeltPaciente extends HttpServlet {
 		   pac.setPassPct(contraseniaP);
 		   pdao.agregarpacientes(pac);
 		   response.sendRedirect("index.jsp");
+		   
+		   */
 		    //
 		   
 		   

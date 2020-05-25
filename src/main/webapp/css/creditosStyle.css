@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.tablaCreditos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 30px;
+}
+
+.creditos{
+	background-color: #FFF;
+	text-align: center;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+.creditos th, td{
+	padding: 20px;
+	border-right: solid 5px gray;
+}
+
+.creditos thead{
+	background-color: #ffd31d;
+	border-bottom: solid 5px gray;
+	color: #000;
+}
+
+.creditos tr:nth-child(even){
+	background-color: #ddd;
+}
+
+.creditos tr:hover td{
+	background-color: #ffe277;
+	color: #000;
+}
+
+.creditos img{
+	width: 175px;
+}
