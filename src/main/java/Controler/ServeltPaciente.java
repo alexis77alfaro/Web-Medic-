@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Dao.PacienteDao;
 import model.Pacientepct;
@@ -35,22 +36,49 @@ public class ServeltPaciente extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String correo = request.getParameter("txtCorreo");
-		   String pass = request.getParameter("txtPass");
-		   
-		   Pacientepct pac = new Pacientepct();
-		   PacienteDao pdao = new PacienteDao();
-		   
-		   pac.setCorreoPct(correo);
-		   pac.setPassPct(pass);
-		   
-		   int verificarPac = pdao.listaPaciente(pac).size();
-		   
-		   if(verificarPac==1) {
-			  System.out.println("Entraste al sistema");
-		   }else {
-			   System.out.println("Datos invalidos");
-		   }
+		Pacientepct pac = new Pacientepct();
+		PacienteDao pdao = new PacienteDao();
+		
+		String correo = request.getParameter("txtCorreo");
+		String pass = request.getParameter("txtPass");
+		
+		//Parametro a utilizar para invocar el cierre de sesion
+		String cerrarSesion = request.getParameter("btnCerrarSesion");
+		
+		/*Si la variable del cierre de sesion NO ESTÁ VACIA,
+		 * esto quiere decir que la variable contiene algun valor,
+		 * entonces se procede a "borrar ese valor" para que 
+		 * el usuario regrese al estado de "No ha iniciado sesion"*/
+		if(cerrarSesion != null) {
+			
+			//Se verifica nuevamente que el llamado venga del boton que diga "Cerrar Sesion"
+			if(cerrarSesion.equals("Cerrar Sesion")) {
+				HttpSession cerrar = (HttpSession) request.getSession();
+				cerrar.invalidate();
+				//Se redirige al usuario al index
+				response.sendRedirect("index.jsp");
+			}
+			
+		/* Caso contrario, significa que el usuario no esta Logueado, y que hará LogIn. 
+		 * Proceso normal de la validacion del login. */
+		} else {
+			pac.setCorreoPct(correo);
+			pac.setPassPct(pass);
+			   
+			int verificarPac = pdao.listaPaciente(pac).size();
+			   
+			if(verificarPac==1) {
+				System.out.println("Entraste al sistema");
+				
+				/* Cuando la validacion del LogIn se haga correctamente
+				 * se rellenara la variable de sesion "validado" para hacer constar 
+				 * que el usuario efectivamente ha iniciado sesión.*/
+				HttpSession validado = request.getSession(true);
+				validado.setAttribute("correoUser", correo);
+			}else {
+				System.out.println("Datos invalidos");
+			}
+		}
 		   
 		   
 		   //--Insercion de pacientes
