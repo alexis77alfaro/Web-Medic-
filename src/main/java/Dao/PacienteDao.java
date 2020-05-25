@@ -27,5 +27,19 @@ public class PacienteDao {
 		
 		return listaPac;
 	}
+	
+	   public void agregarpacientes(Pacientepct pac){
+		   EntityManager em;
+			EntityManagerFactory emf;
+			emf= Persistence.createEntityManagerFactory("WebMedic");
+			em = emf.createEntityManager();
+			
+			
+			em.getTransaction().begin();
+			em.persist(pac);
+			em.flush();
+			em.getTransaction().commit();
+		   
+	   }
 
 }

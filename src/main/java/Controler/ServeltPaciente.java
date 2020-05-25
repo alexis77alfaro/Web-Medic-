@@ -52,6 +52,31 @@ public class ServeltPaciente extends HttpServlet {
 			   System.out.println("Datos invalidos");
 		   }
 		   
+		   
+		   //--Insercion de pacientes
+		   
+		   
+		   String nombresP=request.getParameter("txtnombres");
+		   String apellidosP=request.getParameter("txtapellidos");
+		   String edadP=request.getParameter("txtedad");
+		   String direccionP=request.getParameter("txtdireccion");
+		   String telefonoP=request.getParameter("txttelefono");
+		   String usuarioP=request.getParameter("txtusuario");
+		   String  contraseniaP=request.getParameter("txtcontrasenia");
+		   
+		   pac.setNombresPct(nombresP);
+		   pac.setApellidosPct(apellidosP);
+		   pac.setEdadPct(Integer.parseInt(edadP));
+		   pac.setDireccionPct(direccionP);
+		   pac.setTelefonoPct(telefonoP);
+		   pac.setCorreoPct(usuarioP);
+		   pac.setPassPct(contraseniaP);
+		   pdao.agregarpacientes(pac);
+		   response.sendRedirect("index.jsp");
+		    //
+		   
+		   
+		   
 		
 		}
 

@@ -9,7 +9,8 @@
     </head>
     <style>
         body{
-            background: url(img/fondoMdc1.jpg) 
+            background: url(img/fondoMdc1.jpg);
+            
         }
         .container{
             background-color: #ffffff;
@@ -20,7 +21,7 @@
     </style>
     <body>
         <div class="container col-lg-4" style="opacity: 0.9">
-            <form action="">
+            <form action="ServeltPaciente" method="Post">
                 <div class="form-group text-center">
                  <h5>Registro de Pacientes</h5>
 
@@ -29,26 +30,26 @@
                 <div class="row">
                     <div class="col-sm-12 form-group">
                         <label class="">Ingrese su Nombre</label>
-                        <input type="text"  maxlength="50" class="form-control" placeholder="Nombre(s)">
+                        <input type="text"  maxlength="50" class="form-control" placeholder="Nombre(s)" name="txtnombres">
                     </div>
                     <br>
                     <br>
                     <div class="col-sm-12 form-group">
                         <label >Ingrese su apellido</label>
-                        <input type="text" maxlength="50" class="form-control" placeholder="Apellido(s)">
+                        <input type="text" maxlength="50" class="form-control" placeholder="Apellido(s)" name="txtapellidos">
                     </div>
                     <br>
                     <br>
                     <div class="col form-group">
                         <label>Ingrese su edad</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Edad">
+                        <input type="text" maxlength="10" class="form-control" placeholder="Edad" name="txtedad">
                     </div>
                     <br>
                     <br>
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su dirección</label>
-                        <input type="text" placeholder="Direccion" class="form-control"maxlength="50">
+                        <input type="text" placeholder="Direccion" class="form-control"maxlength="50" name="txtdireccion">
 
                     </div>
 
@@ -57,7 +58,7 @@
   
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su telefono</label>
-                        <input type="text" placeholder="Telefono" class="form-control"  maxlength="8">
+                        <input type="text" placeholder="Telefono" class="form-control"  maxlength="8" name="txttelefono">
 
                     </div>
 
@@ -66,14 +67,14 @@
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su usuario</label>
-                        <input type="text" placeholder="Usuario" class="form-control"  maxlength="30">
+                        <input type="text" placeholder="Usuario" class="form-control"  maxlength="30" name="txtusuario">
 
                     </div>
                     <br>  
                     <br>  
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su contraseña</label>
-                        <input type="password" class="form-control" maxlength="16" placeholder="Contraseña">
+                        <input type="password" class="form-control" maxlength="16" placeholder="Contraseña" name="txtcontrasenia">
 
                     </div> 
                     <br>  
@@ -87,11 +88,11 @@
 
                 </div>
 
-                <input type="button" class="btn btn-info btn-block" value="Registrar"> 
+                <input type="submit" class="btn btn-info btn-block" value="Registrar"> 
 
             </form>
             <br>  
-            <a href="LoginPaciente.jsp"> Cancelar </a>
+            <a href="index.jsp"> Cancelar </a>
 
         </div>
 
