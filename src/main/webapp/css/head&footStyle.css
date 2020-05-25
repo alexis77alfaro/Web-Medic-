@@ -21,7 +21,8 @@
 	width: 30%;
 }
 
-.head .logo span{
+.head .logo a{
+	text-decoration: none;
 	margin: 5px;
 	font-weight: bold;
 	font-size: 34px;
@@ -38,7 +39,7 @@
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
-	width: 50%;
+	width: 65%;
 	margin: 0;
 }
 
@@ -70,59 +71,30 @@
 }
 
 .head .menu ul li a:hover{
-	background-color: #4cbbb9;
-	border-radius: 10px;
-	padding: 10px;
 	color: #FFF;
 }
 
-.head .logIn{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 20%;
-	margin: 15px;
-	padding: 2px;
-	background-color: #4cbbb9;
-	border-radius: 10px;
+.subMenu{
+	background-color: #77d8d8;
+	border-radius: 6px;
+	box-shadow: -15px 15px 35px 1px rgba(0,0,0,0.4);
 }
 
-.head .logIn img{
-	width: 23%;
+.subMenu li{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	width: 100%;
 }
 
-.head .logIn .opcLogIn{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 65%;
-	margin: 5px;
-	margin-top: 0;
-	padding: 5px;
+.head .menu ul li .subMenu{
+	display:none;
+	position:absolute;
 }
 
-.head .logIn .opcLogIn a{
-	text-align: center;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 18px;
-	background-color: #0779e4;
-	border-radius: 10px;
-	padding: 5px;
-	margin: 5px;
-	letter-spacing: 1px;
-	color: #000;
-	width: 95%;
+.head .menu ul li:hover > .subMenu {
+	display:block;
 }
 
-.head .logIn .opcLogIn a:hover{
-	background-color: #eff3c6;
-	color: #000;
-}
-
-/* footer */
 .footer{
     background: #8ccbbe;
     color: #000;

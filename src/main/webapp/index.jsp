@@ -11,10 +11,22 @@
 	<header class="head">
 		<div class="logo">
 			<img src="img/wm_logo2.png">
-			<span>Web Medic</span>
+			<a href="index.jsp">Web Medic</a>
 		</div>
 		<div class="menu">
 			<ul>
+				<li>
+					<a href="">Soy Doctor &#x25BE;</a>
+					<ul class="subMenu">
+						<li>
+							<a href="">Iniciar Sesion</a>
+						</li>
+						<li>
+							<a href="">Contactar Clínica</a>
+						</li>
+					</ul>
+				</li>
+				<hr>
 				<li>
 					<a href="">Mi Perfil</a>
 				</li>
@@ -36,17 +48,16 @@
 				</li>
 			</ul>
 		</div>
-		<div class="logIn">
-			<img src="img/usuario.png">
-			<div class="opcLogIn">
-				<a href="LoginPaciente.jsp">Iniciar Sesion</a>
-				<a href="RegistrarPaciente.jsp">Registrarme</a>
-			</div>
-		</div>
 	</header>
 	<div class="content">
 		<div class="anuncio">
-			Ten cuidado con el COVID-19
+			<h5>Ante la emergencia del COVID-19<br>¡Cuídate, eres lo más importante para nosotros!</h5>
+			<div class="logIn">
+<!--				<span>¿Eres nuevo? ¡Regístrate! &#x279E;</span> -->
+				<a href="RegistrarPaciente.jsp">REGISTRARME</a>
+<!--				<span>Si ya estás registrado, Inicia Sesión &#x279E;</span> -->
+				<a href="LoginPaciente.jsp">INICIAR SESIÓN</a>
+			</div>
 		</div>
 		<div class="principal">
 			<div class="item">
@@ -80,10 +91,12 @@
 			</p>
 		</div>
 		<div class="rotulo">
-			<h2>¿Que te ofrecemos?</h2>
-			<p>
-				WEB MEDIC ES UN SISTEMA INFORMATICO DISEï¿½ADO PARA ESTE HOSPITAL CON LA FINALIDAD DE AUTOMATIZAR EL PROCESO DE LA AGENDA DE CITAS MEDICAS, PROPORCIONANDO UNA MANERA SENCILLA Y EFICAZ DE LLEVAR A CABO ESTE PROCESO CON EL FIN DE DIRIGIR LA MAXIMA ATENCIï¿½N A LO QUE DE VERDAD ES IMPORTANTE: NUESTROS CLIENTES.
-			</p>
+			<div class="rItems">
+				<h2>¿QUÉ TE OFRECEMOS?</h2>
+				<p>
+					WEB MEDIC ES UN SISTEMA INFORMÁTICO DISEÑADO PARA ESTE HOSPITAL CON LA FINALIDAD DE AUTOMATIZAR EL PROCESO DE LA AGENDA DE CITAS MÉDICAS, PROPORCIONANDO UNA MANERA SENCILLA Y EFICAZ DE LLEVAR A CABO ÉSTE PROCESO CON EL FIN DE DIRIGIR LA MÁXIMA ATENCIÓN A LO QUE DE VERDAD ES IMPORTANTE: NUESTROS CLIENTES.
+				</p>
+			</div>
 		</div>
 	</div>
 	 <div class="footer">

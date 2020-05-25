@@ -15,9 +15,10 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url("../img/fondoMdc3.jpg");
+	background-image: url("../img/electrocardiogramHD.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 .anuncio{
@@ -26,8 +27,57 @@ body{
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100px;
+	min-height: 150px;
 	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.anuncio h5{
+	text-align: center;
+	font-size: 28px;
+	padding: 10px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 50%;
+	background-color: #ee8572;
+	border-radius: 15px;
+	border: 3px solid #FFF;
+	cursor: default;
+}
+
+.logIn{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 60%;
+	margin: 5px;
+	margin-top: 0;
+	padding: 5px;
+}
+
+.logIn span{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.logIn a{
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #035aa6;
+	border-radius: 10px;
+	border: 2px solid rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	margin: 5px;
+	letter-spacing: 1px;
+	color: #FFF;
+	width: 20%;
+}
+
+.logIn a:hover{
+	background-color: #eff3c6;
+	color: #000;
 }
 
 .principal{
@@ -118,14 +168,22 @@ body{
 
 .rotulo{
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	background-image: url("../img/fondoMdc3.jpg");
+}
+
+.rItems{
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url("../img/fondoMdc1.jpg");
 	padding: 80px 0;
+	width: 55%;
 }
 
-.rotulo h2{
+.rItems h2{
 	background-color: rgba(0, 0, 0, 0.7);
 	text-align: center;
 	font-size: 50px;
@@ -138,7 +196,7 @@ body{
 	border-top-left-radius: 20px;
 }
 
-.rotulo p{
+.rItems p{
 	background-color: rgba(0, 0, 0, 0.7);
 	text-align: center;
 	font-weight: bold;

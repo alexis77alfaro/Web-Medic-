@@ -19,13 +19,25 @@
         }
     </style>
     <body>
-        	<header class="head">
+	<header class="head">
 		<div class="logo">
 			<img src="img/wm_logo2.png">
-			<span>Web Medic</span>
+			<a href="index.jsp">Web Medic</a>
 		</div>
 		<div class="menu">
 			<ul>
+				<li>
+					<a href="">Soy Doctor &#x25BE;</a>
+					<ul class="subMenu">
+						<li>
+							<a href="">Iniciar Sesion</a>
+						</li>
+						<li>
+							<a href="">Contactar Clínica</a>
+						</li>
+					</ul>
+				</li>
+				<hr>
 				<li>
 					<a href="">Mi Perfil</a>
 				</li>
@@ -46,13 +58,6 @@
 					<a href="">Creditos</a>
 				</li>
 			</ul>
-		</div>
-		<div class="logIn">
-			<img src="img/usuario.png">
-			<div class="opcLogIn">
-				<a href="LoginPaciente.jsp">Iniciar Sesion</a>
-				<a href="RegistrarPaciente.jsp">Registrarme</a>
-			</div>
 		</div>
 	</header>
         <div class="container col-lg-3" style="margin-bottom:60px;">
