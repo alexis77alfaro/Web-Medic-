@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>Controler.ServeltPaciente</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>servletInfPaciente</servlet-name>
+  	<display-name>servletInfPaciente</display-name>
+  	<description></description>
+  	<servlet-class>Controler.servletInfPaciente</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PacienteControler</servlet-name>
   	<url-pattern>/PacienteControler</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>ServeltPaciente</servlet-name>
   	<url-pattern>/ServeltPaciente</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>servletInfPaciente</servlet-name>
+  	<url-pattern>/servletInfPaciente</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,11 +1,16 @@
 package Controler;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.google.gson.Gson;
 
 import Dao.PacienteDao;
 import model.Pacientepct;
@@ -64,10 +69,14 @@ public class ServeltPaciente extends HttpServlet {
 		} else {
 			pac.setCorreoPct(correo);
 			pac.setPassPct(pass);
-			   
-			int verificarPac = pdao.listaPaciente(pac).size();
-			   
+			
+			
+			int verificarPac = pdao.logInPaciente(pac).size();			
+			
 			if(verificarPac==1) {
+
+/*				List<Pacientepct> info = pdao.logInPaciente(pac);
+				System.out.println(info); */
 				System.out.println("Entraste al sistema");
 				
 				/* Cuando la validacion del LogIn se haga correctamente

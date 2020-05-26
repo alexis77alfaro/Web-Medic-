@@ -7,8 +7,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import model.Pacientepct;
+
 public class PacienteDao {
-	public List<Pacientepct> listaPaciente(Pacientepct pa){
+	
+	public List<Pacientepct> logInPaciente(Pacientepct pa){
 		List<Pacientepct> listaPac = new ArrayList<>();
 		
 		EntityManager em;
@@ -23,7 +25,6 @@ public class PacienteDao {
 		} catch (Exception e) {
 			System.out.println("Ha ocurrido un error: "+e);
 		}
-		
 		
 		return listaPac;
 	}
