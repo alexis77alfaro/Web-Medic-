@@ -21,6 +21,7 @@ public class PacienteDao {
 		try {
 			em.getTransaction().begin();
 			listaPac= em.createQuery("from Pacientepct where correoPct = '"+pa.getCorreoPct()+"' and passPct = '"+pa.getPassPct()+"' ").getResultList();
+			em.getTransaction().commit();
 			
 		} catch (Exception e) {
 			System.out.println("Ha ocurrido un error: "+e);
