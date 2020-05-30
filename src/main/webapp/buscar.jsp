@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web Medic</title>
-	<link rel="stylesheet" type="text/css" href="css/creditosStyle.css">
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="css/buscarStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/indexStyle.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
@@ -50,38 +52,61 @@
 			</ul>
 		</div>
 	</header>
-		<div class="content">
-		<div class="tablaCreditos">
-			<table class="creditos">
-			<thead>
-				<tr>
-					<th>
-						Recurso
-					</th>
-					<th>
-						Crédito
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<img src="img/electrocardiogramHD.jpg">
-					</td>
-					<td>
-						Imagen de <a href="https://pixabay.com/es/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Gerd Altmann</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Pixabay</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/fondoMdc3.jpg">
-					</td>
-					<td>
-						Imagen de <a href="https://pixabay.com/es/users/voltamax-60363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Yerson Retamal</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Pixabay</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="content">
+		<form class="buscador">
+			<input class="textBox" type="text" name="" placeholder="Escribe la especialidad del doctor que buscas...">
+			<input class="botonBuscar" id="btn" type="submit" name="">
+		</form>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#resultados').show();
+
+				$( "#btn" ).click(function(){
+					$('#resultados').hide();
+				});
+			});
+		</script>
+		<div class="result" id="resultados">
+			<table class="resultTable">
+				<thead>
+					<tr>
+						<th>
+							Especialidad
+						</th>
+						<th>
+							Doctor
+						</th>
+						<th>
+							Opciones
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Pediatra
+						</td>
+						<td>
+							Juan Perez
+						</td>
+						<td>
+							<a href="">Solicitar Consulta</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Pediatra
+						</td>
+						<td>
+							Juan Perez
+						</td>
+						<td>
+							<a href="">Solicitar Consulta</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<div class="footer">
