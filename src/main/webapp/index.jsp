@@ -19,7 +19,7 @@
 					<a href="">Soy Doctor &#x25BE;</a>
 					<ul class="subMenu">
 						<li>
-							<a href="">Iniciar Sesion</a>
+							<a href="loginDct.jsp">Iniciar Sesion</a>
 						</li>
 						<li>
 							<a href="">Contactar Clínica</a>
@@ -36,7 +36,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="">Buscar</a>
+					<a href="buscar.jsp">Buscar</a>
 				</li>
 				<hr>
 				<li>

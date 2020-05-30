@@ -3,20 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web Medic</title>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="css/buscarStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/miPerfilPctStyle.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
-<%
-	HttpSession seccionPrincipal = (HttpSession) request.getSession();
-	String sectionVarUsser = (String) seccionPrincipal.getAttribute("correoUser");
-	if(sectionVarUsser == null){
-		response.sendRedirect("LoginPaciente.jsp");
-	}
-%>
 <body>
 	<header class="head">
 		<div class="logo">
@@ -60,18 +53,63 @@
 		</div>
 	</header>
 	<div class="content">
-		<div class="fondo">
-		</div>
-		<div class="perfil">
-			<img class="avatar" src="img/usuario.png">
-			<div class="inf">
-				<h3>Nombre</h3>
-				<span>Correo</span>
-				<p>Direccion</p>
-			</div>
+		<form class="buscador">
+			<input class="textBox" type="text" name="" placeholder="Escribe la especialidad del doctor que buscas...">
+			<input class="botonBuscar" id="btn" type="submit" name="">
+		</form>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#resultados').show();
+
+				$( "#btn" ).click(function(){
+					$('#resultados').hide();
+				});
+			});
+		</script>
+		<div class="result" id="resultados">
+			<table class="resultTable">
+				<thead>
+					<tr>
+						<th>
+							Especialidad
+						</th>
+						<th>
+							Doctor
+						</th>
+						<th>
+							Opciones
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Pediatra
+						</td>
+						<td>
+							Juan Perez
+						</td>
+						<td>
+							<a href="">Solicitar Consulta</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Pediatra
+						</td>
+						<td>
+							Juan Perez
+						</td>
+						<td>
+							<a href="">Solicitar Consulta</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
-	 <div class="footer">
+	<div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">
                 <h1 class="logo-text"><span id="SU">Clinic</span><span>Web</span></h1>
