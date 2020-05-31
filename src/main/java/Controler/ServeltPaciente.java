@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,8 +34,7 @@ public class ServeltPaciente extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	    
 	}
 
 	/**
@@ -70,9 +70,7 @@ public class ServeltPaciente extends HttpServlet {
 			pac.setCorreoPct(correo);
 			pac.setPassPct(pass);
 			
-			
-			int verificarPac = pdao.logInPaciente(pac).size();			
-			
+			int verificarPac = pdao.logInPaciente(pac).size();	
 			if(verificarPac==1) {
 
 /*				List<Pacientepct> info = pdao.logInPaciente(pac);
@@ -82,6 +80,23 @@ public class ServeltPaciente extends HttpServlet {
 				/* Cuando la validacion del LogIn se haga correctamente
 				 * se rellenara la variable de sesion "validado" para hacer constar 
 				 * que el usuario efectivamente ha iniciado sesión.*/
+                  
+				/*Recorremos la tabla Paciente con el filtro del login
+				 *  y enviamos los datos al perfil del paciente*/
+				
+				 for (Pacientepct nombrePct:pdao.logInPaciente(pac)) {
+					 request.setAttribute("np", nombrePct.getNombresPct());
+					 request.setAttribute("ap", nombrePct.getApellidosPct());
+					 request.setAttribute("ep", nombrePct.getEdadPct());
+					 request.setAttribute("tp", nombrePct.getTelefonoPct());
+					 request.setAttribute("dp", nombrePct.getDireccionPct());
+					 request.setAttribute("cp", nombrePct.getCorreoPct());
+					 
+					 request.getRequestDispatcher("/miPerfilPct.jsp").forward(request,response);
+					 
+				 }
+				 
+				  
 				HttpSession validado = request.getSession(true);
 				validado.setAttribute("correoUser", correo);
 				response.sendRedirect("miPerfilPct.jsp");
@@ -120,6 +135,9 @@ public class ServeltPaciente extends HttpServlet {
 		
 		}
 
+}
 	
 
-}
+	
+
+

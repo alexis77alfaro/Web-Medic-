@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,7 @@
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
 <%
 	HttpSession seccionPrincipal = (HttpSession) request.getSession();
 	String sectionVarUsser = (String) seccionPrincipal.getAttribute("correoUser");
@@ -17,6 +19,7 @@
 		response.sendRedirect("LoginPaciente.jsp");
 	}
 %>
+
 <body>
 	<header class="head">
 		<div class="logo">
@@ -65,9 +68,13 @@
 		<div class="perfil">
 			<img class="avatar" src="img/usuario.png">
 			<div class="inf">
-				<h3>Nombre</h3>
-				<span>Correo</span>
-				<p>Direccion</p>
+				<h4><% out.print(request.getAttribute("np"));%></h4>
+				<h4><% out.print(request.getAttribute("ap"));%></h4>
+				<h4><% out.print(request.getAttribute("ep"));%></h4>
+				<h4><% out.print(request.getAttribute("tp"));%></h4>
+				<h4><% out.print(request.getAttribute("dp"));%></h4>
+				<h4><% out.print(request.getAttribute("cp"));%></h4>
+				
 			</div>
 		</div>
 	</div>
