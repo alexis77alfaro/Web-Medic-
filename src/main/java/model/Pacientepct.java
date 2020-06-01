@@ -35,9 +35,13 @@ public class Pacientepct implements Serializable {
 	@OneToMany(mappedBy="pacientepct")
 	private List<Citact> citacts;
 
-	//bi-directional many-to-one association to Historialhpct
+	//bi-directional many-to-one association to Fotosf
 	@OneToMany(mappedBy="pacientepct")
-	private List<Historialhpct> historialhpcts;
+	private List<Fotosf> fotosfs;
+
+	//bi-directional many-to-one association to Historialh
+	@OneToMany(mappedBy="pacientepct")
+	private List<Historialh> historialhs;
 
 	public Pacientepct() {
 	}
@@ -128,26 +132,48 @@ public class Pacientepct implements Serializable {
 		return citact;
 	}
 
-	public List<Historialhpct> getHistorialhpcts() {
-		return this.historialhpcts;
+	public List<Fotosf> getFotosfs() {
+		return this.fotosfs;
 	}
 
-	public void setHistorialhpcts(List<Historialhpct> historialhpcts) {
-		this.historialhpcts = historialhpcts;
+	public void setFotosfs(List<Fotosf> fotosfs) {
+		this.fotosfs = fotosfs;
 	}
 
-	public Historialhpct addHistorialhpct(Historialhpct historialhpct) {
-		getHistorialhpcts().add(historialhpct);
-		historialhpct.setPacientepct(this);
+	public Fotosf addFotosf(Fotosf fotosf) {
+		getFotosfs().add(fotosf);
+		fotosf.setPacientepct(this);
 
-		return historialhpct;
+		return fotosf;
 	}
 
-	public Historialhpct removeHistorialhpct(Historialhpct historialhpct) {
-		getHistorialhpcts().remove(historialhpct);
-		historialhpct.setPacientepct(null);
+	public Fotosf removeFotosf(Fotosf fotosf) {
+		getFotosfs().remove(fotosf);
+		fotosf.setPacientepct(null);
 
-		return historialhpct;
+		return fotosf;
+	}
+
+	public List<Historialh> getHistorialhs() {
+		return this.historialhs;
+	}
+
+	public void setHistorialhs(List<Historialh> historialhs) {
+		this.historialhs = historialhs;
+	}
+
+	public Historialh addHistorialh(Historialh historialh) {
+		getHistorialhs().add(historialh);
+		historialh.setPacientepct(this);
+
+		return historialh;
+	}
+
+	public Historialh removeHistorialh(Historialh historialh) {
+		getHistorialhs().remove(historialh);
+		historialh.setPacientepct(null);
+
+		return historialh;
 	}
 
 }

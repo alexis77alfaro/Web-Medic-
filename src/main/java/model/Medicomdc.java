@@ -39,9 +39,17 @@ public class Medicomdc implements Serializable {
 	@OneToMany(mappedBy="medicomdc")
 	private List<Especialidadesmdc> especialidadesmdcs;
 
-	//bi-directional many-to-one association to Historialhmdc
+	//bi-directional many-to-one association to Fotosf
 	@OneToMany(mappedBy="medicomdc")
-	private List<Historialhmdc> historialhmdcs;
+	private List<Fotosf> fotosfs;
+
+	//bi-directional many-to-one association to Historialh
+	@OneToMany(mappedBy="medicomdc")
+	private List<Historialh> historialhs;
+
+	//bi-directional many-to-one association to Horariohr
+	@OneToMany(mappedBy="medicomdc")
+	private List<Horariohr> horariohrs;
 
 	public Medicomdc() {
 	}
@@ -154,26 +162,70 @@ public class Medicomdc implements Serializable {
 		return especialidadesmdc;
 	}
 
-	public List<Historialhmdc> getHistorialhmdcs() {
-		return this.historialhmdcs;
+	public List<Fotosf> getFotosfs() {
+		return this.fotosfs;
 	}
 
-	public void setHistorialhmdcs(List<Historialhmdc> historialhmdcs) {
-		this.historialhmdcs = historialhmdcs;
+	public void setFotosfs(List<Fotosf> fotosfs) {
+		this.fotosfs = fotosfs;
 	}
 
-	public Historialhmdc addHistorialhmdc(Historialhmdc historialhmdc) {
-		getHistorialhmdcs().add(historialhmdc);
-		historialhmdc.setMedicomdc(this);
+	public Fotosf addFotosf(Fotosf fotosf) {
+		getFotosfs().add(fotosf);
+		fotosf.setMedicomdc(this);
 
-		return historialhmdc;
+		return fotosf;
 	}
 
-	public Historialhmdc removeHistorialhmdc(Historialhmdc historialhmdc) {
-		getHistorialhmdcs().remove(historialhmdc);
-		historialhmdc.setMedicomdc(null);
+	public Fotosf removeFotosf(Fotosf fotosf) {
+		getFotosfs().remove(fotosf);
+		fotosf.setMedicomdc(null);
 
-		return historialhmdc;
+		return fotosf;
+	}
+
+	public List<Historialh> getHistorialhs() {
+		return this.historialhs;
+	}
+
+	public void setHistorialhs(List<Historialh> historialhs) {
+		this.historialhs = historialhs;
+	}
+
+	public Historialh addHistorialh(Historialh historialh) {
+		getHistorialhs().add(historialh);
+		historialh.setMedicomdc(this);
+
+		return historialh;
+	}
+
+	public Historialh removeHistorialh(Historialh historialh) {
+		getHistorialhs().remove(historialh);
+		historialh.setMedicomdc(null);
+
+		return historialh;
+	}
+
+	public List<Horariohr> getHorariohrs() {
+		return this.horariohrs;
+	}
+
+	public void setHorariohrs(List<Horariohr> horariohrs) {
+		this.horariohrs = horariohrs;
+	}
+
+	public Horariohr addHorariohr(Horariohr horariohr) {
+		getHorariohrs().add(horariohr);
+		horariohr.setMedicomdc(this);
+
+		return horariohr;
+	}
+
+	public Horariohr removeHorariohr(Horariohr horariohr) {
+		getHorariohrs().remove(horariohr);
+		horariohr.setMedicomdc(null);
+
+		return horariohr;
 	}
 
 }

@@ -6,12 +6,12 @@ import java.util.Date;
 
 
 /**
- * The persistent class for the historialhpct database table.
+ * The persistent class for the historialh database table.
  * 
  */
 @Entity
-@NamedQuery(name="Historialhpct.findAll", query="SELECT h FROM Historialhpct h")
-public class Historialhpct implements Serializable {
+@NamedQuery(name="Historialh.findAll", query="SELECT h FROM Historialh h")
+public class Historialh implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -20,12 +20,17 @@ public class Historialhpct implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
 
+	//bi-directional many-to-one association to Medicomdc
+	@ManyToOne
+	@JoinColumn(name="idMdc")
+	private Medicomdc medicomdc;
+
 	//bi-directional many-to-one association to Pacientepct
 	@ManyToOne
 	@JoinColumn(name="idPct")
 	private Pacientepct pacientepct;
 
-	public Historialhpct() {
+	public Historialh() {
 	}
 
 	public int getIdH() {
@@ -42,6 +47,14 @@ public class Historialhpct implements Serializable {
 
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+
+	public Medicomdc getMedicomdc() {
+		return this.medicomdc;
+	}
+
+	public void setMedicomdc(Medicomdc medicomdc) {
+		this.medicomdc = medicomdc;
 	}
 
 	public Pacientepct getPacientepct() {

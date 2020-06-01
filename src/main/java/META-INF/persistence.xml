@@ -5,8 +5,9 @@
 		<class>model.Citact</class>
 		<class>model.Detallecitadc</class>
 		<class>model.Especialidadesmdc</class>
-		<class>model.Historialhmdc</class>
-		<class>model.Historialhpct</class>
+		<class>model.Fotosf</class>
+		<class>model.Historialh</class>
+		<class>model.Horariohr</class>
 		<class>model.Medicomdc</class>
 		<class>model.Pacientepct</class>
 		<class>model.Sugerenciassg</class>
@@ -15,6 +16,7 @@
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/clinica"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="1234"/>
 		</properties>
 	</persistence-unit>
 </persistence>
