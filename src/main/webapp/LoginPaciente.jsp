@@ -74,7 +74,7 @@
                  <label>Contraseña</label>
                  <input type="password" placeholder="**********" name="txtPass" class="form-control">
              </div> 
-               <input type="submit" value="Ingresar" class="btn btn-info btn-block">
+               <input type="submit" value="Ingresar" class="btn btn-info btn-block" name="btn">
             </form>
                 <br>
                 <a href="index.jsp" style="position: relative; top: -2px; left: 20px;">Cancelar</a>
