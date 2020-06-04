@@ -21,7 +21,7 @@ public class CitaDao {
 		em.getTransaction().commit();
 	}
 	
-	public List<Object> cita(){
+	public List<Object> verCita(){
 		List<Object> verCita = new ArrayList();
 		EntityManager em;
 		EntityManagerFactory emf;
@@ -29,12 +29,10 @@ public class CitaDao {
 		em = emf.createEntityManager();
 		try {
 			em.getTransaction().begin();
-			verCita = em.createQuery("SELECT ci.idCT, ci.estado, pa.nombresPct, me.nombresMdc"
-					+ "from Citact AS ci INNER JOIN Pacientepct AS pa ON ci.idPct = pa.idPct"
-					+ "INNER JOIN Medicomdc AS me ON ci.idMdc = me.idMdc ").getResultList();
+			verCita = em.createQuery("SELECT c.idCT, c.estado, pa.nombresPct, me.nombresMdc from Citact AS c INNER JOIN Pacientepct AS pa ON c.idPct = pa.idPct INNER JOIN Medicomdc AS me ON c.idMdc = me.idMdc ").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
-			System.out.println("Error "+e);
+			System.out.println("Error "+e.toString());
 		}
 		
 		return verCita;
