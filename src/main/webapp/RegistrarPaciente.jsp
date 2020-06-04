@@ -131,7 +131,7 @@
 
                 </div>
 
-                <input type="submit" class="btn btn-info btn-block" value="Registrar"> 
+                <input type="submit" class="btn btn-info btn-block" value="Registrar" name="btn"> 
 
             </form>
             <br>  

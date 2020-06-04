@@ -70,7 +70,7 @@
         <input type="text" name="nombre de usuario" placeholder="usuario">
         <p>Contraseña</p>
         <input type="password" name="contraseña" placeholder="Contraseña">
-        <input type="submit" name="submit" value="Login">
+        <input type="submit" name="submit" value="Login" name="btn">
         <a href="#"></a>
     </form>
 

@@ -4,47 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil Del Doctor</title>
     <link rel="stylesheet" type="text/css" href="css/PerfilDoc.css">
     <link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
-     <link rel="stylesheet" type="text/css" href="css/Tabla.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
   
 </head>
- <script src="http://code.jquery.com/jquery-latest.js"> </script>
-  <script type="text/javascript">
-     $(document).ready(function(){
-       
-          $.post('ServeltCita',{
-
-          }, function(response){
-          let datos = JSON.parse(response);
-          var tabladatos = document.getElementById('cita');
-        
-          for(let item of datos){
-          
-            tabladatos.innerHTML += `
-            
-            	<td>${item[0]}</td>
-                <td>${item[1]}</td>
-                <td>${item[2]}</td>
-                <td>${item[3]}</td>
-                <td> 
-                
-                </td>
-       
-            `
-
-           }
-
-         
-
-         });
-     
-     });
-   </script>
 
 <body>
     <!-- header -->
@@ -95,27 +62,164 @@
                 <a href="">@FacundoVal</a>
             </li>
         </ul>
-        <div class="acercade">
-            <h3>Acerca De El Doctor 12</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam architecto, dolorem atque repellendus, illo consequatur impedit molestias asperiores earum porro ut dignissimos fuga numquam commodi sunt sit placeat. Atque, numquam.</p>
+        <br>
+        <br>
+        
+        <div class="container1">
+        <div class="infoper">
+            <h2>Información Personal <button class="opcioni">Opciones</button> </h2>
+        
+         <h4 id="espacio">Dirección: <span>bla bla bla bla bla bla</span></h4>
+         <br>
+         
+         <h4>Teléfono: <span>bla bla bla bla bla bla</span></h4>
+         <br>
+         <br>
+         <h4>Descripción: <span>bla bla bla bla bla bla</span></h4>
         </div>
+
+        <div class="horario">
+            <div class="container2">
+                <table class="table1">
+                    <caption>Horarios De Consulta <button class="opcionh">Opciones</button> </caption>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>hora</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes</td>
+                           
+                            <td>9:00 a.m</td>
+
+                        </tr>
+                        <tr>
+                            <td>Miercoles</td>
+                           
+                            <td>10:00 a.m </td>
+
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                           
+                            <td>9:30 a.m</td>
+
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                           
+                            <td>11:30 a.m</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
         <div class="container">
-        <table class="table" id="cita">
-            <caption>Solicitudes De Pacientes</caption>
+        <table class="table">
+            <caption>Solicitudes De Pacientes  <button class="opciones">Opciones</button></caption>
+           
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Estado</th>
                     <th>Paciente</th>
-                    <th>Medico</th>
-                    
+                    <th>Consulta</th>
+                    <th>fecha</th>
                     <th>¿Que Desea Hacer?</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>Samuel Alexander Garcia Pereira</td>
+                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
+                    <td>30 de mayo de 2020</td>
+                    <td> <button class="buttonaceptar">Confirmar</button> <button
+                            class="buttonrechazar">Rechazar</button> </td>
+                </tr>
+                <tr>
+                    <td>Samuel Alexander Garcia Pereira</td>
+                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
+                    <td>30 de mayo de 2020</td>
+                    <td> <button class="buttonaceptar">Confirmar</button> <button class="buttonrechazar">Rechazar</button> </td>
+                </tr>
+                <tr>
+                    <td>Samuel Alexander Garcia Pereira</td>
+                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
+                    <td>30 de mayo de 2020</td>
+                    <td> <button class="buttonaceptar">Confirmar</button> <button class="buttonrechazar">Rechazar</button> </td>
+                </tr>
+            </tbody>
         </table>
-        
     </div>
     
+    <br>
+    <br>
+    <br>
+    <br>
+    
+     <div id="general">
+    <div id="proximacita">
+        <h2>Proxima cita medica <button class="opcionc">Opciones</button> </h2>
+        <h4>Paciente: <span>Edwin Rivas</span></h4>
+        <br>
+        <br>
+        <h4>Descripción Del Paciente: <span>bla bla bla bla jjjjjjjjjjjjjalgo algo clgo algo</span></h4>
+        <br>
+        <br>
+        <h4>Descripción De La Cita: <span>Dolor en la espalda, con complicaciones arteriales severas, fuerte
+        migraña</span></h4>
+        <br>
+        <br>
+        <h4>Hora De La Cita: <span>3:00 p.m</span></h4>
+    </div>
+    <div id="aunnosesabe">
+    <button class="opcionn">Opciones</button>
+   <h2>Aun no se nos ocurre nada XDXD</h2>
+    </div>
+    
+    <div id="agenda">
+        <div class="container2">
+            <table class="table2">
+                <caption>Agenda de la semana <button>Opciones</button></caption>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>fecha</th>
+                        <th>hora</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Samuel Alexander Garcia Pereira</td>
+                        <td>30 de mayo de 2020</td>
+                        <td>1:00 p.m</td>
+
+                    </tr>
+                    <tr>
+                        <td>Samuel Alexander Garcia Pereira</td>
+                        <td>30 de mayo de 2020</td>
+                        <td>1:00 p.m</td>
+
+                    </tr>
+                    <tr id="final">
+                        <td>Samuel Alexander Garcia Pereira</td>
+                        <td>30 de mayo de 2020</td>
+                        <td>1:00 p.m</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
     <br>
     <br>
     
