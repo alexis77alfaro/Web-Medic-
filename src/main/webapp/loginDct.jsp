@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
     <link rel="stylesheet" href="css/estilosDct.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <title>Doctor</title>
 </head>
-<style>
-        body{
-            background: url(img/fondoMdc1.jpg) 
-        }
-        .container{
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 60px;
-        }
-    </style>
-    <body>
+<body>
+    
 	<header class="head">
 		<div class="logo">
 			<img src="img/wm_logo2.png">
@@ -61,7 +53,7 @@
 		</div>
 	</header>
 
-<body>
+
     <div class="login-box">
     <img src="img/avatar.png" class="avatar">
     <h1>LOGIN</h1>
@@ -75,6 +67,48 @@
     </form>
 
     </div>
+    
+      <!-- footer -->
+ <div class="footer">
+    <div class="footer-contenido">
+        <div class="footer-seccion sobre">
+            <h1 class="logo-text"><span id="SU">Web</span><span> Medic</span></h1>
+            <p>
+              Somos una clinica, la cual ofrece diferentes servicios medicos, tambien contamos con diferentes especialidades <br>
+              -psiquiatría <br>
+              -Cardiologia <br>
+              -Reumatologia <br>
+              -Pediatría
+            </p>
+          
+            
+           
+        </div>
+        <div class="footer-seccion contacto">
+            <h2>Contactanos</h2>
+         <br>
+         <div class="contacto">
+            <span><i class="fas fa-phone"></i> &nbsp;(+503)5869-4815</span><br> <br>
+            <span><i class="fas fa-envelope"></i> &nbsp;Info@clinicweb.com</span><br> <br>
+            <span><i class="fas fa-map-marker-alt"></i>&nbsp; Avenida salchipapa</span>
+        </div>
+        </div>
+        <div class="footer-seccion-redes">
+            <h2>Siguenos en Nuestras redes</h2>
+            <br>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </div>
+        <div class="footer-bottom">
+            &copy;2020,Todos los derechos reservados | Web Medic
+        </div>
+    
+</div>
+<!-- //footer -->   
+    
     
 </body>
 </html>

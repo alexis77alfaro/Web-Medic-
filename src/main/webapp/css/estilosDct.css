@@ -1,8 +1,12 @@
 @charset "ISO-8859-1";
+
+.footer{
+	margin-top:40%;
+}
 body{
     margin: 0;
     padding: 0;
-    background: url(img/salud-2-e1551914549589.jpg);
+    background: url(../img/salud-2-e1551914549589.jpg);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
