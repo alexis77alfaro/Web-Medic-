@@ -12,6 +12,34 @@
 
   
 </head>
+ <script src="http://code.jquery.com/jquery-latest.js"> </script>
+  <script type="text/javascript">
+     $(document).ready(function(){
+       
+          $.post('ServeltCita',{
+          }, function(response){
+          let datos = JSON.parse(response);
+          
+          var tabladatos = document.getElementById('cita');
+          
+          for(let item of datos){
+          
+            tabladatos.innerHTML += `
+            
+            	<td>${item[0]}</td>
+                <td>${item[1]}</td>
+                <td>${item[2]}</td>
+                <td>${item[3]}</td>
+                <td>${item[4]}</td>
+                <td>${item[5]}</td>
+       
+            `
+           }
+         
+         });
+     
+     });
+   </script>
 
 <body>
     <!-- header -->
@@ -124,38 +152,24 @@
     <br>
     <br>
         <div class="container">
-        <table class="table">
+        <table class="table" id="cita">
             <caption>Solicitudes De Pacientes  <button class="opciones">Opciones</button></caption>
            
             <thead>
                 <tr>
-                    <th>Paciente</th>
-                    <th>Consulta</th>
-                    <th>fecha</th>
+                    <th>Id</th>
+                    <th>Nombre Paciente</th>
+                    <th>Apellido Paciente</th>
+                    <th>Estado</th>
+                    <th>Descripcion</th>
+                     <th>Fecha</th>
                     <th>¿Que Desea Hacer?</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Samuel Alexander Garcia Pereira</td>
-                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
-                    <td>30 de mayo de 2020</td>
-                    <td> <button class="buttonaceptar">Confirmar</button> <button
-                            class="buttonrechazar">Rechazar</button> </td>
-                </tr>
-                <tr>
-                    <td>Samuel Alexander Garcia Pereira</td>
-                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
-                    <td>30 de mayo de 2020</td>
-                    <td> <button class="buttonaceptar">Confirmar</button> <button class="buttonrechazar">Rechazar</button> </td>
-                </tr>
-                <tr>
-                    <td>Samuel Alexander Garcia Pereira</td>
-                    <td>Problema de insomnio,llevo 5 dias sin dormir</td>
-                    <td>30 de mayo de 2020</td>
-                    <td> <button class="buttonaceptar">Confirmar</button> <button class="buttonrechazar">Rechazar</button> </td>
-                </tr>
-            </tbody>
+               <tbody>
+   
+              </tbody>
+           
         </table>
     </div>
     

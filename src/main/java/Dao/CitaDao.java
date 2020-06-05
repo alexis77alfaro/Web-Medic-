@@ -29,7 +29,9 @@ public class CitaDao {
 		em = emf.createEntityManager();
 		try {
 			em.getTransaction().begin();
-			verCita = em.createQuery("SELECT c.idCT, c.estado, pa.nombresPct, me.nombresMdc from Citact AS c INNER JOIN Pacientepct AS pa ON c.idPct = pa.idPct INNER JOIN Medicomdc AS me ON c.idMdc = me.idMdc ").getResultList();
+			verCita = em.createQuery("SELECT c.idCT, p.nombresPct, p.apellidosPct, c.estado, d.descripcionDC, d.fechaDC "
+					+ "FROM Citact AS c INNER JOIN Pacientepct AS p ON c.pacientepct.idPct = p.idPct "
+					+ "INNER JOIN Detallecitadc AS d ON c.idCT = d.citact.idCT").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println("Error "+e.toString());
