@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+
+body {
+    background: url(../img/Sony-en-Medica-2014.jpg);
+    background-size: cover;
+    /* tipo portada o que ocupe la pantallacompleta del fondo   */
+}
+
+.main-section {
+    margin: auto;
+    /* centrado */
+    margin-top: 25%;
+    /*  que baje un 25% */
+    padding: 0;
+}
+
+.user-img {
+    margin-top: -50px;
+    /* para que la imagen suba */
+    margin-bottom: 35px;
+    /*  para los otros elementos de abajo queden bien */
+}
+
+.user-img img {
+    width: 90px;
+    /* ancho de 100pixeles */
+    height: 90px;
+    /* y un alto de 100px, ahora dado que ya lo subimos 50px va quedar en toda la mitad */
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #848484;
+    margin-bottom: 15px;
+}
+
+.modal-content {
+    background-color: black;
+    opacity: .75;
+    /* la transparencia */
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+    /* esto es para que la imagen tenga una pequeña sombra como margen */
+}
+
+.form-group input {
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 54px;
+    /* espacio interno */
+    border-radius: 5px;
+}
+
+.form-group::before {
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top: 4px;
+}
+
+.form-group#user-group::before {
+    content: "\f007";
+}
+
+.form-group#contraseña-group::before {
+    content: "\f023";
+}
+
+button {
+    width: 70%;
+    margin: 5px 0 25px;
+}
+
+.forgot {
+    padding: 5px 0;
+}
+
+/* .forgot a {
+    color: #fff;
+} */
