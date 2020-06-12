@@ -35,10 +35,6 @@ public class Pacientepct implements Serializable {
 	@OneToMany(mappedBy="pacientepct")
 	private List<Citact> citacts;
 
-	//bi-directional many-to-one association to Fotosf
-	@OneToMany(mappedBy="pacientepct")
-	private List<Fotosf> fotosfs;
-
 	//bi-directional many-to-one association to Historialh
 	@OneToMany(mappedBy="pacientepct")
 	private List<Historialh> historialhs;
@@ -130,28 +126,6 @@ public class Pacientepct implements Serializable {
 		citact.setPacientepct(null);
 
 		return citact;
-	}
-
-	public List<Fotosf> getFotosfs() {
-		return this.fotosfs;
-	}
-
-	public void setFotosfs(List<Fotosf> fotosfs) {
-		this.fotosfs = fotosfs;
-	}
-
-	public Fotosf addFotosf(Fotosf fotosf) {
-		getFotosfs().add(fotosf);
-		fotosf.setPacientepct(this);
-
-		return fotosf;
-	}
-
-	public Fotosf removeFotosf(Fotosf fotosf) {
-		getFotosfs().remove(fotosf);
-		fotosf.setPacientepct(null);
-
-		return fotosf;
 	}
 
 	public List<Historialh> getHistorialhs() {
