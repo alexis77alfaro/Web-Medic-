@@ -52,6 +52,7 @@
 			</ul>
 		</div>
 	</header>
+	
 	<div class="content">
 		<form class="buscador">
 			<input class="textBox" type="text" name="" placeholder="Escribe la especialidad del doctor que buscas...">
@@ -66,16 +67,53 @@
 					$('#resultados').hide();
 				});
 			});
+		     $(document).ready(function(){
+		         
+		          var btn = $('#carga').val();
+		          $.post('ServeltDoc',{
+
+		          }, function(response){
+		          let datos = JSON.parse(response);
+		  
+		          var tabladatos = document.getElementById('medico');
+
+		           for(let item of datos){
+		            tabladatos.innerHTML += ` 
+		              <tr>
+		            	<td>${item[0]}</td>
+		                <td>${item[1]}</td>
+		                <td>${item[2]}</td>
+		                <td>${item[3]}</td>
+		                <td>
+		                <a href="ServeltDoc?btn=Soli&Idm=${item[0]}&ip=<%out.print(request.getParameter("Idp"));%>">Solicitar Cita</a>     
+		                </td>
+		              </tr>
+
+		            `
+
+		           }
+
+		         
+
+		         });
+		     
+		     });
 		</script>
 		<div class="result" id="resultados">
-			<table class="resultTable">
+			<table class="resultTable" id="medico">
 				<thead>
 					<tr>
+					    <th>
+							Id
+						</th>
 						<th>
 							Especialidad
 						</th>
 						<th>
-							Doctor
+							Nombre Doctor
+						</th>
+						<th>
+							Apellido Doctor
 						</th>
 						<th>
 							Opciones
@@ -83,28 +121,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>
-							Pediatra
-						</td>
-						<td>
-							Juan Perez
-						</td>
-						<td>
-							<a href="">Solicitar Consulta</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Pediatra
-						</td>
-						<td>
-							Juan Perez
-						</td>
-						<td>
-							<a href="">Solicitar Consulta</a>
-						</td>
-					</tr>
+			
 				</tbody>
 			</table>
 		</div>

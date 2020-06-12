@@ -20,6 +20,7 @@
 	}
 %>
 
+
 <body>
 	<header class="head">
 		<div class="logo">
@@ -74,7 +75,7 @@
 				<h4><% out.print(request.getAttribute("tp"));%></h4>
 				<h4><% out.print(request.getAttribute("dp"));%></h4>
 				<h4><% out.print(request.getAttribute("cp"));%></h4>
-				
+				 <a href="buscar.jsp?Idp=<%out.print(request.getAttribute("ip"));%>">Solicitar Cita</a> 
 			</div>
 		</div>
 	</div>

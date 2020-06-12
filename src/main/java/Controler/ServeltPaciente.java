@@ -87,6 +87,7 @@ public class ServeltPaciente extends HttpServlet {
 					 *  y enviamos los datos al perfil del paciente*/
 					
 					 for (Pacientepct nombrePct:pdao.logInPaciente(pac)) {
+						 request.setAttribute("ip", nombrePct.getIdPct());
 						 request.setAttribute("np", nombrePct.getNombresPct());
 						 request.setAttribute("ap", nombrePct.getApellidosPct());
 						 request.setAttribute("ep", nombrePct.getEdadPct());
