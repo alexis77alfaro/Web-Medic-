@@ -39,10 +39,6 @@ public class Medicomdc implements Serializable {
 	@OneToMany(mappedBy="medicomdc")
 	private List<Especialidadesmdc> especialidadesmdcs;
 
-	//bi-directional many-to-one association to Fotosf
-	@OneToMany(mappedBy="medicomdc")
-	private List<Fotosf> fotosfs;
-
 	//bi-directional many-to-one association to Historialh
 	@OneToMany(mappedBy="medicomdc")
 	private List<Historialh> historialhs;
@@ -160,28 +156,6 @@ public class Medicomdc implements Serializable {
 		especialidadesmdc.setMedicomdc(null);
 
 		return especialidadesmdc;
-	}
-
-	public List<Fotosf> getFotosfs() {
-		return this.fotosfs;
-	}
-
-	public void setFotosfs(List<Fotosf> fotosfs) {
-		this.fotosfs = fotosfs;
-	}
-
-	public Fotosf addFotosf(Fotosf fotosf) {
-		getFotosfs().add(fotosf);
-		fotosf.setMedicomdc(this);
-
-		return fotosf;
-	}
-
-	public Fotosf removeFotosf(Fotosf fotosf) {
-		getFotosfs().remove(fotosf);
-		fotosf.setMedicomdc(null);
-
-		return fotosf;
 	}
 
 	public List<Historialh> getHistorialhs() {
