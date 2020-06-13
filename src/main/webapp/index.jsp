@@ -40,7 +40,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="">¿Quienes somos?</a>
+					<a href="QuienesSomos.jsp">¿Quienes somos?</a>
 				</li>
 				<hr>
 				<li>
