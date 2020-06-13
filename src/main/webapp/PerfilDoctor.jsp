@@ -50,21 +50,9 @@
 		</div>
 		<div class="menu">
 			<ul>
-				<li>
-					<a href="">Mi Perfil</a>
-				</li>
-				<hr>
-				<br>
-				<li>
-					<a href="">Servicios</a>
-				</li>
-				<hr>
-				
-				<li>
-					<a href="">Buscar</a>
-				</li>
-				<hr>
-			
+		        <li>
+        	         <a class="btnAjustes" href="">Ajustes</a>
+            	 </li>
 			</ul>
 		</div>
 		

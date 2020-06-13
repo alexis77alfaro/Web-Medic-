@@ -102,7 +102,7 @@ public class ServeltPaciente extends HttpServlet {
 					  
 					HttpSession validado = request.getSession(true);
 					validado.setAttribute("correoUser", correo);
-					response.sendRedirect("miPerfilPct.jsp");
+//					response.sendRedirect("miPerfilPct.jsp");
 				}else {
 					System.out.println("Datos invalidos");
 				}

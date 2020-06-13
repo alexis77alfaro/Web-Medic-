@@ -22,20 +22,13 @@
      <div class="menu">
          <ul>
              <li>
-                 <a href="">Mi Perfil</a>
+                 <span>Panel de Administrador</span>
              </li>
              <hr>
              <br>
              <li>
-                 <a href="">Servicios</a>
+                 <a class="btnAjustes" href="">Ajustes</a>
              </li>
-             <hr>
-
-             <li>
-                 <a href="">Buscar</a>
-             </li>
-             <hr>
-
          </ul>
      </div>
 

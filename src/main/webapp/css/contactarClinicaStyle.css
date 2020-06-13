@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.infContent{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.infContent .back{
+	background-image: url("../img/doctorAnimated1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 50%;
+	height: 500px;
+	padding: 0;
+}
+
+.infContent .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+	height: 500px;
+	padding: 40px;
+	background-color: #abc2e8;
+}
+
+.infContent .text h2{
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: justify-all;;
+}
+
+.infContent .text h3{
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 24px;
+	text-align: justify-all;
+}
+
+.infContent .text span{
+	padding: 5px;
+	margin: 0;
+	font-size: 18px;
+	text-align: justify-all;
+}

@@ -36,7 +36,7 @@
 							<a href="loginDct.jsp">Iniciar Sesion</a>
 						</li>
 						<li>
-							<a href="">Contactar Clínica</a>
+							<a href="contactarClinica.jsp">Contactar Clínica</a>
 						</li>
 					</ul>
 				</li>
