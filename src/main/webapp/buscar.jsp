@@ -93,6 +93,21 @@
 		         });
 		     });
 		</script>
+		
+		 <form class="formulario">
+                <label for="Cita">Cita:</label>
+                <input type="text" name="Nueva" placeholder="Descripción de su cita...">
+
+                <label for="Dia">Dia:</label>
+                <input type="text" name="Dia" placeholder="Día de su cita...">
+
+                <label for="Hora">Hora:</label>
+                <input type="text" name="Hora" id="" placeholder="Hora de su cita...">
+
+                <input class="btnAdd" type="submit" value="Solicitar">
+            </form>
+		
+		
 		<div class="result" id="resultados">
 			<table class="resultTable" id="medico">
 				<thead>
