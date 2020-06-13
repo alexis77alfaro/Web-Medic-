@@ -25,7 +25,7 @@
 							<a href="loginDct.jsp">Iniciar Sesion</a>
 						</li>
 						<li>
-							<a href="">Contactar Clínica</a>
+							<a href="contactarClinica.jsp">Contactar Clínica</a>
 						</li>
 					</ul>
 				</li>
@@ -74,7 +74,7 @@
 
 		          }, function(response){
 		          let datos = JSON.parse(response);
-		  
+
 		          var tabladatos = document.getElementById('medico');
 
 		           for(let item of datos){
@@ -88,15 +88,9 @@
 		                <a href="ServeltMedi?btn=Soli&Idm=${item[0]}&ip=<%out.print(request.getParameter("Idp"));%>">Solicitar Cita</a>     
 		                </td>
 		              </tr>
-
 		            `
-
 		           }
-
-		         
-
 		         });
-		     
 		     });
 		</script>
 		<div class="result" id="resultados">

@@ -70,6 +70,12 @@
 	color: #000;
 }
 
+.head .menu ul li span{
+	font-size: 20px;
+	padding: 10px;
+	color: #000;
+}
+
 .head .menu ul li a:hover{
 	color: #FFF;
 }
@@ -95,6 +101,24 @@
 	display:block;
 }
 
+.btnAjustes{
+	padding: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 10px;
+	background-color: #0e9aa7;
+	border: 2px solid #FFF;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFF;
+}
+
+.btnAjustes:hover{
+	cursor: pointer;
+	background-color: #4cd3c2;
+	color: #000;
+}
 
 .footer{
     background: #8ccbbe;
