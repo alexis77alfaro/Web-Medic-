@@ -15,15 +15,15 @@ import model.Medicomdc;
 import model.Pacientepct;
 
 /**
- * Servlet implementation class ServeltDoc
+ * Servlet implementation class ServeltMedi
  */
-public class ServeltDoc extends HttpServlet {
+public class ServeltMedi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServeltDoc() {
+    public ServeltMedi() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -60,25 +60,24 @@ public class ServeltDoc extends HttpServlet {
 			}
 			
 		}
-	
-			
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DoctorDao dd = new DoctorDao();
-		Gson json = new Gson();
-		
-		try {
+		  DoctorDao dd = new DoctorDao();
+			Gson json = new Gson();
 			
-			response.getWriter().append(json.toJson(dd.verDoc()));
-			
-			
-		} catch (Exception e) {
-		System.out.println(e);
+			try {
+				
+				response.getWriter().append(json.toJson(dd.verDoc()));
+				
+				
+			} catch (Exception e) {
+			System.out.println(e);
+			}
 		}
-	}
+	
 
 }

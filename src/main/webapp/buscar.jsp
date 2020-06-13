@@ -70,7 +70,7 @@
 		     $(document).ready(function(){
 		         
 		          var btn = $('#carga').val();
-		          $.post('ServeltDoc',{
+		          $.post('ServeltMedi',{
 
 		          }, function(response){
 		          let datos = JSON.parse(response);
@@ -85,7 +85,7 @@
 		                <td>${item[2]}</td>
 		                <td>${item[3]}</td>
 		                <td>
-		                <a href="ServeltDoc?btn=Soli&Idm=${item[0]}&ip=<%out.print(request.getParameter("Idp"));%>">Solicitar Cita</a>     
+		                <a href="ServeltMedi?btn=Soli&Idm=${item[0]}&ip=<%out.print(request.getParameter("Idp"));%>">Solicitar Cita</a>     
 		                </td>
 		              </tr>
 

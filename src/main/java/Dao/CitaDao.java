@@ -28,10 +28,8 @@ public class CitaDao {
 		emf= Persistence.createEntityManagerFactory("WebMedic");
 		em = emf.createEntityManager();
 		try {
-			em.getTransaction().begin();
-			verCita = em.createQuery("SELECT c.idCT, p.nombresPct, p.apellidosPct, c.estado, d.descripcionDC, d.fechaDC "
-					+ "FROM Citact AS c INNER JOIN Pacientepct AS p ON c.pacientepct.idPct = p.idPct "
-					+ "INNER JOIN Detallecitadc AS d ON c.idCT = d.citact.idCT").getResultList();
+			verCita = em.createQuery("SELECT c.idCT, p.nombresPct, p.apellidosPct, c.estado, c.descripcionDC, c.fechaDC, c.horaDC "
+					+ "FROM Citact AS c INNER JOIN Pacientepct AS p ON c.pacientepct.idPct = p.idPct").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println("Error "+e.toString());
