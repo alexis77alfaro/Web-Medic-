@@ -15,7 +15,6 @@ import model.Medicomdc;
 import model.Pacientepct;
 
 /**
- * Servlet implementation class ServeltMedi
  */
 public class ServeltMedi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -70,14 +69,12 @@ public class ServeltMedi extends HttpServlet {
 			Gson json = new Gson();
 			
 			try {
-				
+
 				response.getWriter().append(json.toJson(dd.verDoc()));
 				
 				
 			} catch (Exception e) {
 			System.out.println(e);
-			}
-		}
 	
-
 }
+	}}

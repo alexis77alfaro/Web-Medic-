@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>Controler.ServeltCita</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeltMedi</servlet-name>
+  	<display-name>ServeltMedi</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltMedi</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PacienteControler</servlet-name>
   	<url-pattern>/PacienteControler</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>ServeltCita</servlet-name>
   	<url-pattern>/ServeltCita</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltMedi</servlet-name>
+  	<url-pattern>/ServeltMedi</url-pattern>
   </servlet-mapping>
 </web-app>
