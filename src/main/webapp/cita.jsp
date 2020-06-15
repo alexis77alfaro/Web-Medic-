@@ -2,9 +2,8 @@
 <html>
 <head>
 	<title>Web Medic</title>
-	<link rel="stylesheet" type="text/css" href="css/creditosStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/citaStyle.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
@@ -37,7 +36,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="cita.jsp">Hacer Cita</a>
+					<a href="buscar.jsp">Buscar</a>
 				</li>
 				<hr>
 				<li>
@@ -50,38 +49,81 @@
 			</ul>
 		</div>
 	</header>
-		<div class="content">
-		<div class="tablaCreditos">
-			<table class="creditos">
-			<thead>
-				<tr>
-					<th>
-						Recurso
-					</th>
-					<th>
-						Crédito
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<img src="img/electrocardiogramHD.jpg">
-					</td>
-					<td>
-						Imagen de <a href="https://pixabay.com/es/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Gerd Altmann</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3719883">Pixabay</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/fondoMdc3.jpg">
-					</td>
-					<td>
-						Imagen de <a href="https://pixabay.com/es/users/voltamax-60363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Yerson Retamal</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Pixabay</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="content">
+		<div class="tablaLista">
+			<div class="tableMedic">
+				<table class="medicList">
+					<thead>
+						<tr>
+						    <th>
+								Id
+							</th>
+							<th>
+								Especialidad
+							</th>
+							<th>
+								Nombre Doctor
+							</th>
+							<th>
+								Apellido Doctor
+							</th>
+							<th>
+								Opcion
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="citaPlace">
+			<div class="infMedic">
+				<div class="title">
+					<h3>DATOS GENERALES DEL MÉDICO</h3>
+				</div>
+				<div class="data">
+					<div class="datos">
+						<h4>Nombre Completo</h4>
+						<h4>Especialidad</h4>
+						<h4>Telefono</h4>
+						<h4>Correo Electronico</h4>
+					</div>
+					<div class="horario">
+						<h3>HORARIO</h3>
+						<table>
+							<thead>
+									<tr>
+									<th>
+										Día
+									</th>
+									<th>
+										Hora Inicio
+									</th>
+									<th>
+										Hora Final
+									</th>
+								</tr>	
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="cita">
+				<div class="frm">
+					<form class="formulario">
+		                <label class="rotulo" for="Cita">Descripción de la Cita:</label>
+	                	<input class="control" type="text" name="Nueva" placeholder="Descripción de su cita...">
+            	    	<label class="rotulo" for="Dia">Dia:</label>
+        	    	    <input class="control" type="date" name="Dia" placeholder="Día de su cita...">
+    	    	        <label class="rotulo" for="Hora">Hora:</label>
+	    	            <input class="control" type="time" name="Hora" id="" placeholder="Hora de su cita...">
+    		            <input class="button" type="submit" value="Solicitar">
+		            </form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="footer">

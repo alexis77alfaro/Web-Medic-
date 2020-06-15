@@ -1,0 +1,193 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #a6dcef;
+}
+
+.tablaLista{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 3px;
+	padding: 10px;
+	width: 45%;
+	margin-top: 10px;
+}
+
+.tableMedic{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	width: 95%;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 20px;
+	margin-bottom: 200px;
+}
+
+.medicList{
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 18px;
+}
+
+.medicList thead{
+	border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.medicList th,td{
+	padding: 15px;
+}
+
+.medicList tr:hover td{
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #FFF;
+}
+
+.medicList a{
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	background-color: #21bf73;
+	border-radius: 10px;
+	color: #FFF;
+}
+
+.medicList a:hover{
+	background-color: #2c7873;
+}
+
+.citaPlace{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	width: 54%;
+	margin-top: 10px;
+	align-self: flex-start;
+}
+
+.infMedic{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	margin: 3px;
+	margin-bottom: 0;
+}
+
+.title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	background-color: #ddf3f5;
+	margin-bottom: 21px;
+	width: 100%;
+	padding: 15px;
+}
+
+.data{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 15px;
+	margin: 0;
+	margin-bottom: 0;
+	background-color: #ddf3f5;
+}
+
+.data .datos{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 45%;
+	margin-bottom: 0;
+}
+
+.data .horario{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+	margin-bottom: 0;
+}
+
+.cita{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	margin: 3px;
+	margin-top: 0;
+}
+
+.frm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 15px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: #ddf3f5;
+}
+
+.frm .formulario{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 0;
+}
+
+.frm .formulario .rotulo{
+	width: 78%;
+	text-align: left;
+	margin-bottom: 3px;
+}
+
+.frm .formulario .control{
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	width: 80%;
+}
+
+.frm .formulario .button{
+	width: 20%;
+	padding: 8px;
+	margin-top: 15px;
+	border-radius: 20px;
+}
+

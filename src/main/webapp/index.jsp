@@ -36,7 +36,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="buscar.jsp">Buscar</a>
+					<a href="cita.jsp">Hacer Cita</a>
 				</li>
 				<hr>
 				<li>
