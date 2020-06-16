@@ -49,45 +49,26 @@
 			</ul>
 		</div>
 	</header>
-	<div class="content">
-		<div class="tablaLista">
-			<div class="tableMedic">
-				<table class="medicList">
-					<thead>
-						<tr>
-						    <th>
-								Id
-							</th>
-							<th>
-								Especialidad
-							</th>
-							<th>
-								Nombre Doctor
-							</th>
-							<th>
-								Apellido Doctor
-							</th>
-							<th>
-								Opcion
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		<div class="citaPlace">
+	<form action="ServeltMedi" method="POST" >
+		<div class="citaPlace" >
 			<div class="infMedic">
 				<div class="title">
 					<h3>DATOS GENERALES DEL MÉDICO</h3>
 				</div>
 				<div class="data">
 					<div class="datos">
+					    <h4>Paciente</h4>
+						<input type="text" value ="<%out.print(request.getParameter("idp"));%>" name="idp">
+					   <h4>Id Medico</h4>
+						<input type="text" value ="<%out.print(request.getParameter("imedi"));%>" name="iMedi">
 						<h4>Nombre Completo</h4>
+						<input type="text" value ="<%out.print(request.getParameter("nmedi"));%>">
 						<h4>Especialidad</h4>
+						<input type="text" value ="<%out.print(request.getParameter("espe"));%>">
 						<h4>Telefono</h4>
+						<input type="text" value ="<%out.print(request.getParameter("tel"));%>">
 						<h4>Correo Electronico</h4>
+						<input type="text" value ="<%out.print(request.getParameter("corr"));%>">
 					</div>
 					<div class="horario">
 						<h3>HORARIO</h3>
@@ -113,19 +94,20 @@
 			</div>
 			<div class="cita">
 				<div class="frm">
-					<form class="formulario">
+					<div class="formulario">
 		                <label class="rotulo" for="Cita">Descripción de la Cita:</label>
-	                	<input class="control" type="text" name="Nueva" placeholder="Descripción de su cita...">
+	                	<input class="control" type="text" placeholder="Descripción de su cita..." name ="desc">
             	    	<label class="rotulo" for="Dia">Dia:</label>
-        	    	    <input class="control" type="date" name="Dia" placeholder="Día de su cita...">
+        	    	    <input class="control" type="date" name ="dia">
     	    	        <label class="rotulo" for="Hora">Hora:</label>
-	    	            <input class="control" type="time" name="Hora" id="" placeholder="Hora de su cita...">
+	    	            <input class="control" type="time"  name ="hora">
     		            <input class="button" type="submit" value="Solicitar">
-		            </form>
+		            </div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</form>
+	
 	<div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">

@@ -54,19 +54,11 @@
 	</header>
 	
 	<div class="content">
-		<form class="buscador">
-			<input class="textBox" type="text" name="" placeholder="Escribe la especialidad del doctor que buscas...">
-			<input class="botonBuscar" id="btn" type="submit" name="">
+		<form class="buscador" action="ServeltMedi" method="POST">
+			<p>LISTA DE DOCTORES</p>
 		</form>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				$('#resultados').show();
-
-				$( "#btn" ).click(function(){
-					$('#resultados').hide();
-				});
-			});
 		     $(document).ready(function(){
 		         
 		          var btn = $('#carga').val();
@@ -85,7 +77,7 @@
 		                <td>${item[2]}</td>
 		                <td>${item[3]}</td>
 		                <td>
-		                <a href="ServeltMedi?btn=Soli&Idm=${item[0]}&ip=<%out.print(request.getParameter("Idp"));%>">Solicitar Cita</a>     
+		                <a href="cita.jsp?imedi=${item[0]}&nmedi=${item[1]}+${item[2]}&espe=${item[3]}&tel=${item[4]}&corr=${item[5]}&idp=<%out.print(request.getParameter("Idp"));%>">Seleccionar</a>     
 		                </td>
 		              </tr>
 		            `
@@ -93,20 +85,6 @@
 		         });
 		     });
 		</script>
-		
-		 <form class="formulario">
-                <label for="Cita">Cita:</label>
-                <input type="text" name="Nueva" placeholder="Descripción de su cita...">
-
-                <label for="Dia">Dia:</label>
-                <input type="text" name="Dia" placeholder="Día de su cita...">
-
-                <label for="Hora">Hora:</label>
-                <input type="text" name="Hora" id="" placeholder="Hora de su cita...">
-
-                <input class="btnAdd" type="submit" value="Solicitar">
-            </form>
-		
 		
 		<div class="result" id="resultados">
 			<table class="resultTable" id="medico">
