@@ -57,12 +57,13 @@
     <div class="login-box">
     <img src="img/avatar.png" class="avatar">
     <h1>LOGIN</h1>
-    <form action="">
+    <form action="ServeletMedico" method="Post">
         <p>Usuario</p>
-        <input type="text" name="nombre de usuario" placeholder="usuario">
+        <input type="text"  placeholder="usuario" name="usuario">
         <p>Contraseña</p>
-        <input type="password" name="contraseña" placeholder="Contraseña">
-        <input type="submit" name="submit" value="Login" name="btn">
+        <input type="password"  placeholder="Contraseña" name="pass">
+        
+        <input type="submit"  value="Login" name="btn">
         <a href="#"></a>
     </form>
 

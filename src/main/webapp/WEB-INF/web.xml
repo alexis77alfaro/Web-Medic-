@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>Controler.ServeltDCita</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeletMedico</servlet-name>
+  	<display-name>ServeletMedico</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeletMedico</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PacienteControler</servlet-name>
   	<url-pattern>/PacienteControler</url-pattern>
@@ -63,5 +69,9 @@
   <servlet-mapping>
   	<servlet-name>ServeltDCita</servlet-name>
   	<url-pattern>/ServeltDCita</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletMedico</servlet-name>
+  	<url-pattern>/ServeletMedico</url-pattern>
   </servlet-mapping>
 </web-app>
