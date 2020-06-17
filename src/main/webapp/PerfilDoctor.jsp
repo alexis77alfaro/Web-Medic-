@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Perfil Del Doctor</title>
     <link rel="stylesheet" type="text/css" href="css/PerfilDoc.css">
     <link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
@@ -32,6 +33,10 @@
                 <td>${item[3]}</td>
                 <td>${item[4]}</td>
                 <td>${item[5]}</td>
+                <td>${item[6]}</td>
+                <td>
+                <a href="ServeltCita?idcita=${item[0]}&idMed=${item[7]}&idPac=${item[8]}&desc=${item[4]}&dia=${item[5]}&hora=${item[6]}" class="btn btn-info">Aprobar</a>
+                </td>
        
             `
            }
@@ -39,6 +44,27 @@
          });
      
      });
+     $(document).ready(function(){
+         
+         $.post('ServeltDCita',{
+         }, function(response){
+         let datos = JSON.parse(response);
+         
+         var tabladatos = document.getElementById('aprobadas');
+         
+         for(let item of datos){
+         
+           tabladatos.innerHTML += `
+           
+           	<td>${item[0]+item[1]}</td>
+               <td>${item[2]}</td>
+               <td>${item[3]}</td>
+           `
+          }
+        
+        });
+    
+    });
    </script>
 
 <body>
@@ -151,6 +177,7 @@
                     <th>Estado</th>
                     <th>Descripcion</th>
                      <th>Fecha</th>
+                     <th>Hora</th>
                     <th>¿Que Desea Hacer?</th>
                 </tr>
             </thead>
@@ -188,7 +215,7 @@
     
     <div id="agenda">
         <div class="container2">
-            <table class="table2">
+            <table class="table2" id="aprobadas">
                 <caption>Agenda de la semana <button>Opciones</button></caption>
                 <thead>
                     <tr>
@@ -199,24 +226,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Samuel Alexander Garcia Pereira</td>
-                        <td>30 de mayo de 2020</td>
-                        <td>1:00 p.m</td>
-
-                    </tr>
-                    <tr>
-                        <td>Samuel Alexander Garcia Pereira</td>
-                        <td>30 de mayo de 2020</td>
-                        <td>1:00 p.m</td>
-
-                    </tr>
-                    <tr id="final">
-                        <td>Samuel Alexander Garcia Pereira</td>
-                        <td>30 de mayo de 2020</td>
-                        <td>1:00 p.m</td>
-
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>

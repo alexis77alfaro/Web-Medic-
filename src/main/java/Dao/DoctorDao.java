@@ -16,7 +16,6 @@ public class DoctorDao {
 		em = emf.createEntityManager();
 		try {
 			em.getTransaction().begin();
-			verDoc = em.createQuery("SELECT m.idMdc, m.nombresMdc, m.apellidosMdc, e.especialidadEspMdc "
 					+ "FROM Medicomdc AS m INNER JOIN Especialidadesmdc AS e ON m.idMdc = e.medicomdc.idMdc").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
