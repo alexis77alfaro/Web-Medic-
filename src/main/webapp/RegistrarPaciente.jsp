@@ -7,8 +7,15 @@
 		<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
 	    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	    <script src="http://code.jquery.com/jquery-latest.js"> </script>
+	 
+	    
         <title>Registro de Cliente</title>
+            
     </head>
+    
+ 
+    
     <style>
         body{
             background: url(img/fondoMdc1.jpg);
@@ -64,7 +71,8 @@
 		</div>
 	</header>
         <div class="container col-lg-4" style="opacity: 0.9; margin-bottom:60px;">
-            <form action="ServeltPaciente" method="Post">
+        
+            <form name="formulario" action="ServeltPaciente" method="Post">
                 <div class="form-group text-center">
                  <h5>Registro de Pacientes</h5>
 
@@ -73,26 +81,31 @@
                 <div class="row">
                     <div class="col-sm-12 form-group">
                         <label class="">Ingrese su Nombre</label>
-                        <input type="text"  maxlength="50" class="form-control" placeholder="Nombre(s)" name="txtnombres">
+                        <input type="text" class="form-control" placeholder="Nombre(s)" name="txtnombres"
+                         id="nombre" maxlength="20" pattern="[A-Za-z]{3,20}"
+                        title="introduce entre 3 y 20 letras" required>
                     </div>
                     <br>
                     <br>
                     <div class="col-sm-12 form-group">
                         <label >Ingrese su apellido</label>
-                        <input type="text" maxlength="50" class="form-control" placeholder="Apellido(s)" name="txtapellidos">
+                        <input type="text"  id="apellido" class="form-control" placeholder="Apellido(s)" name="txtapellidos" maxlength="20"
+                        pattern="[A-Za-z]{3,20}" title="introducir entre 3 y 20 letras" required>
                     </div>
                     <br>
                     <br>
                     <div class="col form-group">
                         <label>Ingrese su edad</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Edad" name="txtedad">
+                        <input type="number" id="edad" class="form-control" placeholder="Edad" name="txtedad" id="edad" min="18" max="100" 
+                               title="introducir edad entre 18 y 100" required>
                     </div>
                     <br>
                     <br>
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su dirección</label>
-                        <input type="text" placeholder="Direccion" class="form-control"maxlength="50" name="txtdireccion">
+                        <input type="text" id="direccion" placeholder="Direccion" class="form-control"maxlength="50" name="txtdireccion"
+                          title="introducir entre 1 y 50 letras" required>
 
                     </div>
 
@@ -101,7 +114,8 @@
   
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su telefono</label>
-                        <input type="text" placeholder="Telefono" class="form-control"  maxlength="8" name="txttelefono">
+                        <input type="text" id="telefono" placeholder="Telefono" class="form-control"  maxlength="8" name="txttelefono"
+                         pattern="[0-9]{8}" title="introducir número telefonico de 8 cifras" required>
 
                     </div>
 
@@ -109,15 +123,17 @@
                     <br>  
 
                     <div class="col-sm-12 form-group"> 
-                        <label>Ingrese su usuario</label>
-                        <input type="text" placeholder="Usuario" class="form-control"  maxlength="30" name="txtusuario">
+                        <label>Ingrese su Correo</label>
+                        <input type="text" id="usuario" placeholder="Usuario" class="form-control"  maxlength="20" name="txtusuario"
+                          min="3" max="20"  title="introduce entre 3 y 20 digitos" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required >
 
-                    </div>
+                    </div> 
                     <br>  
                     <br>  
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su contraseña</label>
-                        <input type="password" class="form-control" maxlength="16" placeholder="Contraseña" name="txtcontrasenia">
+                        <input type="password" id="contrasenia" class="form-control" maxlength="16" placeholder="Contraseña" name="txtcontrasenia"
+                            min="4" max="16"  title="introducir contraseña entre 4 y 16 digitos" pattern="[a-z-0-9]{4,16}" required>
 
                     </div> 
                     <br>  
@@ -125,19 +141,24 @@
 
                     <div class="col-sm-12 form-group"> 
                         <label>Confirme su contraseña</label>
-                        <input type="password" class="form-control" maxlength="16" placeholder="Confirmar">
+                        <input type="password" id="confirmar" class="form-control" name="txtconfirmar" maxlength="16" placeholder="Confirmar"
+                      min="4" max="16" title="confirme su contraseña" pattern="[a-z-0-9]{4,16}" required>
 
                     </div>
 
                 </div>
+             
 
-                <input type="submit" class="btn btn-info btn-block" value="Registrar" name="btn"> 
+                <input type="submit" class="btn btn-info btn-block" value="Registrar" name="btn" > 
 
             </form>
             <br>  
             <a href="index.jsp"> Cancelar </a>
 
         </div>
+               
+        
+        
     <div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">
@@ -153,6 +174,15 @@
                 
                
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div class="footer-seccion contacto">
                 <h2>Contactanos</h2>
              <br>
@@ -183,4 +213,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     </body>
+    
+   
+    
+    
 </html>
