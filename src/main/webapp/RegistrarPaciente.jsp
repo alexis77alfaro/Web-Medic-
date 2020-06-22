@@ -104,7 +104,7 @@
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su dirección</label>
-                        <input type="text" id="direccion" placeholder="Direccion" class="form-control"maxlength="50" name="txtdireccion"
+                        <input type="text" id="direccion" placeholder="Direccion" class="form-control" maxlength="50" name="txtdireccion"
                           title="introducir entre 1 y 50 letras" required>
 
                     </div>
@@ -124,8 +124,8 @@
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su Correo</label>
-                        <input type="text" id="usuario" placeholder="Usuario" class="form-control"  maxlength="20" name="txtusuario"
-                          min="3" max="20"  title="introduce entre 3 y 20 digitos" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required >
+                        <input type="text" id="usuario" placeholder="Usuario" class="form-control"  maxlength="30" name="txtusuario"
+                          title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required >
 
                     </div> 
                     <br>  

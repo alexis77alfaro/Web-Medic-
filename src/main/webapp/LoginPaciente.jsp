@@ -67,12 +67,14 @@
              </div>  
              <div class="form-group text-center">
                  <label>Correo Electronico</label>
-                 <input type="text" placeholder="usuario@gmail.com" name="txtCorreo" class="form-control">
+                 <input type="text" placeholder="usuario@gmail.com" name="txtCorreo" class="form-control"maxlength="30" 
+                   title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required>
              </div>
 
              <div class ="form-group text-center">
                  <label>Contraseña</label>
-                 <input type="password" placeholder="**********" name="txtPass" class="form-control">
+                 <input type="password" placeholder="**********" name="txtPass" class="form-control"  maxlength="16" min="4" max="16"
+                 title="introducir contraseña entre 4 y 16 digitos" pattern="[a-z-0-9]{4,16}" required>
              </div> 
                <input type="submit" value="Ingresar" class="btn btn-info btn-block" name="btn">
             </form>

@@ -46,6 +46,18 @@
   	<description></description>
   	<servlet-class>Controler.ServeletMedico</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeltControlCita</servlet-name>
+  	<display-name>ServeltControlCita</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltControlCita</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeltAgregarMedico</servlet-name>
+  	<display-name>ServeltAgregarMedico</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltAgregarMedico</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PacienteControler</servlet-name>
   	<url-pattern>/PacienteControler</url-pattern>
@@ -73,5 +85,13 @@
   <servlet-mapping>
   	<servlet-name>ServeletMedico</servlet-name>
   	<url-pattern>/ServeletMedico</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltControlCita</servlet-name>
+  	<url-pattern>/ServeltControlCita</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltAgregarMedico</servlet-name>
+  	<url-pattern>/ServeltAgregarMedico</url-pattern>
   </servlet-mapping>
 </web-app>

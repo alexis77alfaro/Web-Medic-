@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import model.Medicomdc;
 import model.Pacientepct;
 
 public class PacienteDao {
@@ -38,7 +39,7 @@ public class PacienteDao {
 			
 			
 			em.getTransaction().begin();
-			em.persist(pac);
+			em.persist(pac );
 			em.flush();
 			em.getTransaction().commit();
 		   

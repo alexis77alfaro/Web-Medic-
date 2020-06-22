@@ -58,10 +58,13 @@
     <img src="img/avatar.png" class="avatar">
     <h1>LOGIN</h1>
     <form action="ServeletMedico" method="Post">
-        <p>Usuario</p>
-        <input type="text"  placeholder="usuario" name="usuario">
+        <p>Correo Electrónico</p>
+        <input type="text"  placeholder="Correo" name="usuario" maxlength="30" 
+         title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required>
+         
         <p>Contraseña</p>
-        <input type="password"  placeholder="Contraseña" name="pass">
+        <input type="password"  placeholder="Contraseña" name="pass" maxlength="16" min="4" max="16"
+         title="introducir contraseña entre 4 y 16 digitos" pattern="[a-z-0-9]{4,16}" required>
         
         <input type="submit"  value="Login" name="btn">
         <a href="#"></a>

@@ -7,7 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import model.Especialidadesmdc;
 import model.Medicomdc;
+import model.Pacientepct;
 
 public class DoctorDao {
 	public List<Object> verDoc(){
@@ -45,5 +47,19 @@ public class DoctorDao {
 		return loguin;
 		
 	}
+	
+	 public void agregarMedico(Medicomdc me){
+		   EntityManager em;
+			EntityManagerFactory emf;
+			emf= Persistence.createEntityManagerFactory("WebMedic");
+			em = emf.createEntityManager();
+			
+			
+			em.getTransaction().begin();
+			em.persist(me);
+			em.flush();
+			em.getTransaction().commit();
+		   
+	   }
 
 }
