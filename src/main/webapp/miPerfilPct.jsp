@@ -52,7 +52,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="cita.jsp">Hacer Cita</a>
+					<a href="buscar.jsp">Ver Doctores</a>
 				</li>
 				<hr>
 				<li>
@@ -60,7 +60,7 @@
 				</li>
 				<hr>
 				<li>
-					<a href="creditos.jsp">Creditos</a>
+					<a class="btnAjustes" href="">Cerrar Sesión</a>
 				</li>
 			</ul>
 		</div>
@@ -69,15 +69,40 @@
 		<div class="fondo">
 		</div>
 		<div class="perfil">
-			<img class="avatar" src="img/usuario.png">
+			<img class="avatar" src="img/paciente2.png">
 			<div class="inf">
-				<h4><% out.print(request.getAttribute("np"));%></h4>
-				<h4><% out.print(request.getAttribute("ap"));%></h4>
-				<h4><% out.print(request.getAttribute("ep"));%></h4>
-				<h4><% out.print(request.getAttribute("tp"));%></h4>
-				<h4><% out.print(request.getAttribute("dp"));%></h4>
-				<h4><% out.print(request.getAttribute("cp"));%></h4>
-				 <a href="buscar.jsp?Idp=<%out.print(request.getAttribute("ip"));%>">Solicitar Cita</a> 
+				<h3><% out.print(request.getAttribute("np"));%> <% out.print(request.getAttribute("ap"));%></h3>
+				<h3></h3>
+				<span>Correo Electrónico: <% out.print(request.getAttribute("cp"));%></span>
+				<span>Edad: <% out.print(request.getAttribute("ep"));%></span>
+				<span>Teléfono: <% out.print(request.getAttribute("tp"));%></span>
+				<p>Dirección: <% out.print(request.getAttribute("dp"));%></p>
+			</div>
+			<div class="accion">
+				<a class="btnAccion" href="buscar.jsp?Idp=<%out.print(request.getAttribute("ip"));%>">Consulta la lista de Doctores y solicita tu cita.</a>
+			</div>
+			<div class="misCitas">
+				<h2>Estado de mis citas solicitadas</h2>
+				<table class="resultTable">
+					<thead>
+						<tr>
+							<th>
+								Doctor
+							</th>
+							<th>
+								Fecha
+							</th>
+							<th>
+								Hora
+							</th>
+							<th>
+								Estado
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

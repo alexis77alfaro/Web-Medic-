@@ -17,10 +17,7 @@ Body{
     background-color: transparent;
     display: flex;
     justify-content: space-around;
-    
 }
-
-
 
 #encabezado {
 margin: auto;
@@ -332,4 +329,3 @@ td {
   background-color: rgb(146, 138, 138);
   color: #fff;
 }
-

@@ -16,6 +16,15 @@
 	background-size: cover;
 }
 
+.rotulo{
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	margin: 60px 0;
+	font-size: 32px;
+	color: #FFF;
+}
+
 .buscador{
 	display: flex;
 	flex-direction: row;

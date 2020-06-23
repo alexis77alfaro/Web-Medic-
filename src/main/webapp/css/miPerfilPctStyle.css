@@ -16,7 +16,7 @@
 
 .perfil{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -29,6 +29,7 @@
 	position: absolute;
 	top: 280px;
 	left: 230px;
+	background-color: #ffbd69;
 }
 
 .perfil .inf{
@@ -45,12 +46,14 @@
 	font-weight: bold;
 	font-size: 38px;
 	width: 100%;
+	margin-bottom: 5px;
 }
 
 .inf span{
 	text-align: left;
 	font-size: 18px;
 	width: 100%;
+	margin-bottom: 5px;
 }
 
 .inf p{
@@ -58,4 +61,75 @@
 	font-size: 18px;
 	width: 100%;
 	color: gray;
+	margin-bottom: 5px;
+}
+
+.accion{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+	margin: 25px 0;
+}
+
+.accion .btnAccion{
+	text-decoration: none;
+	text-align: center;
+	background-color: #111d5e;
+	border: solid 2px #000;
+	border-radius: 20px;
+	width: 60%;
+	padding: 10px;
+	font-size: 32px;
+	color: #FFF;
+}
+
+.accion .btnAccion:hover{
+	cursor: pointer;
+	background-color: #a6dcef;
+	color: #000;
+}
+
+.misCitas{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.resultTable{
+	text-align: left;
+	border-collapse: collapse;
+	width: 60%;
+	font-size: 18px;
+}
+
+.resultTable thead{
+	border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.resultTable th,td{
+	padding: 15px;
+}
+
+.resultTable tr:hover td{
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #FFF;
+}
+
+.resultTable a{
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	background-color: #21bf73;
+	border-radius: 10px;
+	color: #FFF;
+}
+
+.resultTable a:hover{
+	background-color: #2c7873;
 }

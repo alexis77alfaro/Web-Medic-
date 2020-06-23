@@ -8,7 +8,7 @@
 .content{
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	margin: 0;
 	padding: 0;
@@ -191,3 +191,55 @@
 	border-radius: 20px;
 }
 
+.horarioDoc{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 3px;
+	padding: 10px;
+	width: 45%;
+	align-self: flex-start;
+	margin-top: 30px;
+}
+
+.divisionDoc{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.resultTable{
+	text-align: left;
+	border-collapse: collapse;
+	width: 95%;
+	font-size: 18px;
+}
+
+.resultTable thead{
+	border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.resultTable th,td{
+	padding: 15px;
+}
+
+.resultTable tr:hover td{
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #FFF;
+}
+
+.resultTable a{
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	background-color: #21bf73;
+	border-radius: 10px;
+	color: #FFF;
+}
+
+.resultTable a:hover{
+	background-color: #2c7873;
+}
