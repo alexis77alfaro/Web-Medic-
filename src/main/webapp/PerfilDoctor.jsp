@@ -86,22 +86,22 @@
 <!-- //header -->
 
     <div class="header">
-        <img class="avatar" src="https://png.pngtree.com/element_origin_min_pic/17/08/27/d29869ee820d8b3f8c2518830bced789.jpg" alt="">
-        <h1 class="nombredeusuario">Facundo Valdez</h1>
+        <img class="avatar" src="https://png.pngtree.com/element_origin_min_pic/17/08/27/d29869ee820d8b3f8c2518830bced789.jpg" alt=""><br>
+        <h1 class="nombredeusuario"><% out.print(request.getAttribute("name")); %></h1>
     </div>
   
         <ul class="social">
             <li>
                 <i class="icon email"></i>
-                <a href="">FacundoValdez@hotmail.com</a>
+                <a href=""><%out.print(request.getAttribute("correo"));%></a>
             </li>
             <li>
                 <i class="icon facebook"></i>
-                <a href="">Facundo Valdez</a>
+                <a href=""><%out.print(request.getAttribute("name")); %></a>
             </li>
             <li>
                 <i class="icon twitter"></i>
-                <a href="">@FacundoVal</a>
+                <a href="twitter.com">twitter</a>
             </li>
         </ul>
         <br>
