@@ -1,6 +1,9 @@
 package Controler;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,14 +46,23 @@ public class ServeltMedi extends HttpServlet {
 		String desc = request.getParameter("desc");
 	    String fecha = request.getParameter("dia");
 	    String hora = request.getParameter("hora");
-	     
-		CitaDao ci = new CitaDao();
-	     Citact ct = new Citact();
-	     Medicomdc md = new Medicomdc();
-	     Pacientepct pt = new Pacientepct();
+	    CitaDao ci = new CitaDao();
+	    Citact ct = new Citact();
+	    Medicomdc md = new Medicomdc();
+	    Pacientepct pt = new Pacientepct();
 	    
-	
-			try {
+	     try {
+	    SimpleDateFormat sd = new SimpleDateFormat("yyyy-dd-MM");
+	    Date dia = sd.parse(fecha);
+	    Date fechaActual = new Date();
+	    
+	    
+	    if(dia.before(fechaActual)) {
+	    	 response.sendRedirect("Respuesta.jsp?mens='No puedes agendar una cita antes de la fecha actual'");
+	    }else if(dia.after(fechaActual)) {
+	    	response.sendRedirect("Respuesta.jsp?mens='La cita se guardo con exito'");
+
+	    	try {
 				md.setIdMdc(Integer.parseInt(idM));
 				pt.setIdPct(Integer.parseInt(idp));
 				ct.setPacientepct(pt);
@@ -62,9 +74,18 @@ public class ServeltMedi extends HttpServlet {
 				ci.agregarCita(ct);
 				response.sendRedirect("cita.jsp");
 			} catch (Exception e) {
-				System.out.println(e.toString());
+				System.out.println("Error al registrar la cita"+ e.toString());
 			
-		} 
+		}
+	    	
+	    }
+		
+	     }catch (Exception e) {
+			System.out.println("Error al castear las fechas"+ e);
+		}
+	   
+	    
+			 
 			
 			
 			DoctorDao dd = new DoctorDao();
