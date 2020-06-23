@@ -73,74 +73,166 @@
  </header>
  <!-- //header -->
 
- <div id="encabezado">
-     <h3>Bienvenido</h3>
-     <h3>Nombre</h3>
- </div>
+
+<div id="encabezado">
+        <h3>Bienvenido</h3>
+        <h3>Nombre</h3>
+    </div>
 
 
- <div id="container">
-     <div id="ingresardoctores">
-         <form action="ServeltAgregarMedico" method="post">
+    <div id="container">
+        <div id="ingresardoctores">
+            <form>
 
-             <h3>Registro De Doctores</h3>
+                <h3>Registro De Doctores</h3>
 
-             <Label for="Nombres">Nombres:</Label>
-             <input type="text" placeholder="Ingrese los Nombres" name="nombre" maxlength="20" pattern="[A-za-z]{3,20}"
-             title="introduce entre 3 y 20 letras" required>
+                <Label for="Nombres">Nombres:</Label>
+                <input type="text" placeholder="Ingrese los Nombres">
 
-             <label for="Apellidos">Apellidos:</label>
-             <input type="text" placeholder="Ingrese los apellidos" name="apellido" maxlength="20" pattern="[A-za-z]{3,20}"
-             title="introduce entre 3 y 20 letras" required>
+                <label for="Apellidos">Apellidos:</label>
+                <input type="text" placeholder="Ingrese los apellidos">
 
-             <label for="Edad">Edad:</label>
-             <input type="number" placeholder="Ingrese una edad" name="edad" min="18" max="100"
-             title="introducir edad entre 18 y 100" required>
-            
-             <label for="Direccion">Dirección:</label>
-             <input type="text" placeholder="Ingrese una Dirección" name="direccion" maxlength="50"
-              title="introducir entre 1 y 50 letras" required>
+                <label for="Edad">Edad:</label>
+                <input type="number" min="18" max="100" placeholder="Ingrese una edad">
 
-             <label for="Telefono">Teléfono:</label>
-             <input type="text" placeholder="Ingrese un número teléfono" name="telefono" maxlength="8"
-             pattern="[0-9]{8}" title="introducir número telefonico de 8 cifras" required>
+                <label for="Direccion">Dirección:</label>
+                <input type="text" placeholder="Ingrese una Dirección">
 
-             <label for="Correo">Correo Electrónico:</label>
-             <input type="text" placeholder="Ingrese un correo electrónico" name="correo" maxlength="30" 
-             title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required>
+                <label for="Telefono">Teléfono:</label>
+                <input type="text" placeholder="Ingrese un número teléfono">
 
-             <label for="Password">Contraseña:</label>
-             <input type="Password" placeholder="Ingrese una contraseña" name="contra" maxlength="16" min="4" max="16"
-             title="introducir contraseña entre 4 y 16 digitos" pattern="[a-z-0-9]{4,16}" required>
+                <label for="Correo">Correo Electrónico:</label>
+                <input type="text" placeholder="Ingrese un correo electrónico">
+
+                <label for="Password">Contraseña:</label>
+                <input type="Password" placeholder="Ingrese una contraseña">
 
 
-             <button class="buttonC" type="reset">Cancelar</button>
-             <button class="buttonA" type="submit">Agregar Doctor</button>
-         </form>
-     </div>
+                <button class="buttonC" type="reset">Cancelar</button>
+                <button class="buttonA" type="submit">Siguiente</button>
+            </form>
+        </div>
 
-     <div id="solicitudes">
-         <div class="container1">
-             <table class="table" id="tabla">
-                 <caption>Control De Citas <button class="opcion">Opciones</button> </caption>
-                 <thead>
-                     <tr>
-                         <th>Paciente</th>
-                         <th>Descripción-cita</th>
-                         <th>Doctor</th>
-                         <th>Fecha</th>
-                         <th>Hora</th>
-                     </tr>
-                 </thead>
-                 <tbody>
-                   
-                    
-                 </tbody>
-             </table>
-         </div>
-     </div>
+        <div class="especialidad">
+            <form>
 
- </div>
+                <h2>Especialidad de Doctores</h2>
+
+                <label for="Id">ID</label>
+                <input type="text" placeholder="Digite Id">
+
+                <label for="Especialidad">Especialidad</label>
+                <input type="text" name="especialidad" placeholder="Digite una especialidad">
+
+
+                <button class="btn-A" type="submit">Agregar Doctor</button>
+                <button class="btn-C" type="reset">Cancelar</button>
+            </form>
+        </div>
+
+        <div class="resultado" id="resultados">
+            <table class="resultadoTabla" id="medicos">
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+
+                        <th>
+                            Nombre Doctor
+                        </th>
+                        <th>
+                            Apellido Doctor
+                        </th>
+                        <th>
+                            Especialidad
+                        </th>
+                        <th>
+                         <!-- aca podes escribir el nombre de la columna y si queres agregar mas solo pone th asi como lo hice en las anteriores -->
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    
+     <div id="part2">
+        <div id="solicitudes">
+            <div class="container1">
+                <table class="table">
+                    <caption>Control De Citas <button class="opcion">Opciones</button> </caption>
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Descripción-cita</th>
+                            <th>Doctor</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                         <!--    <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                          <!--   <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                         <!--    <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                   <!--          <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                         <!--    <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                        <!--     <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                        <tr>
+                         <!--    <td>Juan Quintanilla</td>
+                            <td>Dolor de cabeza</td>
+                            <td>Dr. Edwin Rivas</td>
+                            <td>26 de junio de 2020</td>
+                            <td>2:00 p.m</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
 
  <!-- footer -->
  <div class="footer">

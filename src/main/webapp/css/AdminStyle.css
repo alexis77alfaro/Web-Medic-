@@ -41,14 +41,14 @@ text-align: center;
 
 #ingresardoctores{
     margin-top: 35px;
-    margin-left: 25px;
+    margin-left: 5px;
     background:#000;
 width: 400px;
 height: 690px;
 box-sizing: border-box;
 padding: 70px 30px;
 border-radius: 15px;
-border: 1px solid rgb(141, 140, 140);
+border: 2px solid #ccc;
 opacity: .75;
 }
 
@@ -81,34 +81,34 @@ opacity: .75;
 }
 
 #ingresardoctores .buttonA {
-    float: right;
-    margin-top: 10px;
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 150px;
-    background-color: rgb(21, 233, 67);
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    color:#fff;
+  float: right;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(240, 215, 72);
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
 }
 
 #ingresardoctores .buttonA:hover{
-    background-color: rgb(35, 165, 35);
+     background-color: rgb(161, 138, 34);
 }
 
 #ingresardoctores .buttonC {
-    margin-top: 10px;
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 150px;
-   background-color: rgb(250, 0, 0);
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    color:#fff;
+ margin-top: 10px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(250, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
 }
 
 #ingresardoctores .buttonC:hover{
@@ -118,7 +118,7 @@ opacity: .75;
 #solicitudes{
     margin-top: 85px;
     width: 750px;
-    height: auto;
+    height: 170px;
     background-color: #fff;
     border-radius: 15px;
 }
@@ -130,9 +130,8 @@ opacity: .75;
     margin: auto;/*para que se centre cuando pase los 1000px */
     background:transparent;
     border-radius: 15px;
-    border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
+    opacity:0.90;
 }
 
 .table{
@@ -141,6 +140,9 @@ opacity: .75;
     margin: 0;
     padding: 0;
     table-layout: fixed;
+    color:#000;
+    font-family:fantasi;
+   
 }
 
 .table caption{
@@ -173,12 +175,14 @@ opacity: .75;
     font-size: 16px;
     padding: 8px;
     text-align: center;
-    font-family: fantasy;  
+    font-family: fantasy; 
+    
 }
 
 .table thead th{
     text-transform: uppercase;
     background-color: rgb(170, 241, 112);
+    border-bottom:2px solid black; 
 }
 
 @media screen and (max-width:600px){
@@ -205,3 +209,127 @@ opacity: .75;
 .footer {
 	margin-top:60px;
 }
+
+#part2 {
+  margin: auto;
+  width: auto;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+}
+
+.especialidad {
+  margin-top: 300px;
+  width: 400px;
+  height: 300px;
+  background-color: black;
+  margin-left: 5px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid #ccc;
+  opacity: 0.75;
+  display: block;
+}
+
+.especialidad h2 {
+  text-align: center;
+  color: #fff;
+  font-family: fantasy;
+  margin-top: 25px;
+}
+
+.especialidad label {
+  font-size: 18px;
+  color: #fff;
+  font-family: fantasy;
+  display: block;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.especialidad input[type="text"] {
+  border: none;
+  margin-left: 25px;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  width: 250px;
+  font-size: 16px;
+  font-family: fantasy;
+  color: #fff;
+}
+
+.especialidad .btn-A {
+  float: right;
+  margin-top: 10px;
+  margin-right: 15px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 130px;
+  background-color: rgb(21, 233, 67);
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.especialidad .btn-A:hover {
+  background-color: rgb(35, 165, 35);
+}
+
+.especialidad .btn-C {
+  margin-top: 10px;
+  margin-left: 25px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(250, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+.especialidad .btn-C:hover {
+  background-color: rgb(150, 22, 22);
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 130px;
+  height: 100px;
+  width: 52%;
+  background-color: black;
+  border-radius: 20px;
+  opacity: 65%;
+}
+
+.resultadoTabla {
+  text-align: left;
+  border-collapse: collapse;
+  width: 95%;
+  font-size: 18px;
+  color: #fff;
+  font-family: fantasy;
+}
+
+.resultadoTabla thead {
+  border-bottom: solid 2px #ccc;
+}
+.resultadoTabla th,
+td {
+  padding: 15px;
+}
+
+.resultadoTabla tr:hover td {
+  background-color: rgb(146, 138, 138);
+  color: #fff;
+}
+
