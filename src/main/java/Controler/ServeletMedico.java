@@ -53,11 +53,19 @@ public class ServeletMedico extends HttpServlet {
 			
 			int verificarPac = Dct.loging(medico).size();	
 			if(verificarPac==1) {
-				 response.sendRedirect("PerfilDoctor.jsp");
+				
 				 System.out.println("Bienvenido");
-					
+				 
+				for(Medicomdc mdc:Dct.loging(medico)){
+					request.setAttribute("name", mdc.getNombresMdc());
+					request.setAttribute("correo", mdc.getCorreoMdc());
+					request.setAttribute("apellido", mdc.getApellidosMdc());
+					request.getRequestDispatcher("/PerfilDoctor.jsp").forward(request, response);
+					 
+				}
 			}else {
-				System.out.println("error macro");
+				response.sendRedirect("LoginDct.jsp");
+				System.out.print("error macro");
 			}
 		}
 		
