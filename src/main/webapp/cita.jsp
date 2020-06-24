@@ -97,13 +97,11 @@
 				<div class="frm">
 					<div class="formulario">
 		                <label class="rotulo" for="Cita">Descripción de la Cita:</label>
-	                	<input class="control" type="text" placeholder="Descripción de su cita..." name ="desc">
+	                	<input class="control" type="text" placeholder="Descripción de su cita..." name ="desc" required>
 	                	<label class="rotulo" for="Dia">Fecha:</label>
-        	    	    <input class="control" type="date" name ="dia">
-            	    	<label class="rotulo" for="Dia">Dia:</label>
-        	    	    <input class="control" type="text" name ="dia">
+        	    	    <input class="control" type="date" name ="dia" required>
     	    	        <label class="rotulo" for="Hora">Hora:</label>
-	    	            <input class="control" type="time"  name ="hora">
+	    	            <input class="control" type="time"  name ="hora" required>
     		            <input class="button" type="submit" value="Solicitar">
 		            </div>
 				</div>

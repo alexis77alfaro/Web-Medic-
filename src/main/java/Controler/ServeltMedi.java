@@ -50,47 +50,46 @@ public class ServeltMedi extends HttpServlet {
 	    Citact ct = new Citact();
 	    Medicomdc md = new Medicomdc();
 	    Pacientepct pt = new Pacientepct();
-	    SimpleDateFormat sd = new SimpleDateFormat("yyyy-dd-MM");
-	    SimpleDateFormat sdT = new SimpleDateFormat("hh:mm");
+	    SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
+	    //SimpleDateFormat sdT = new SimpleDateFormat("HH:mm");
 	     try {
 	   
 	    Date dia = sd.parse(fecha);
-	    Date fechaActual = new Date();
-	    Date horad = sdT.parse(hora);
-	    Date finalh = sdT.parse("15:00");
-	    Date inicio = sdT.parse("8:00");
+	    Date fechaActual = new Date(System.currentTimeMillis());
+	    //Date horad = sdT.parse(hora);
+	    //Date finalh = sdT.parse("15:00");
+	   // Date inicio = sdT.parse("08:00");
 	
-	    
-	    
-	    
 	    if(dia.before(fechaActual)) {
 	    	 response.sendRedirect("Respuesta.jsp?mens='No puedes agendar una cita antes de la fecha actual'");
-	    }else if(dia.after(fechaActual)) {
-	    	if(horad.before(inicio) && horad.after(finalh)) {
-	    		response.sendRedirect("Respuesta.jsp?mens='La cita no esta dentro del horario establecido'");
-	    	}else if(horad.after(inicio) && horad.before(finalh)){
-	    		
-	    	}
-	    	response.sendRedirect("Respuesta.jsp?mens='La cita se guardo con exito'");
+	    }else{
+	    	   if(ci.revisarCita(hora,dia).size()>=1) {
+		    		response.sendRedirect("Respuesta.jsp?mens='La hora no esta disponible'");
+		    }else{
+		    		response.sendRedirect("Respuesta.jsp?mens='La cita se guardo con exito'");
 
-	    	try {
-				md.setIdMdc(Integer.parseInt(idM));
-				pt.setIdPct(Integer.parseInt(idp));
-				ct.setPacientepct(pt);
-				ct.setDescripcionDC(desc);
-				ct.setEstado("ESPERA");
-				ct.setFechaDC(fecha);
-				ct.setHoraDC(hora);
-				ct.setMedicomdc(md);
-				ci.agregarCita(ct);
-				response.sendRedirect("cita.jsp");
-			} catch (Exception e) {
-				System.out.println("Error al registrar la cita"+ e.toString());
-			
-		}
-	    	
+			    	try {
+						md.setIdMdc(Integer.parseInt(idM));
+						pt.setIdPct(Integer.parseInt(idp));
+						ct.setPacientepct(pt);
+						ct.setDescripcionDC(desc);
+						ct.setEstado("ESPERA");
+						ct.setFechaDC(fecha);
+						ct.setHoraDC(hora);
+						ct.setMedicomdc(md);
+						ci.agregarCita(ct);
+						response.sendRedirect("cita.jsp");
+					} catch (Exception e) {
+						response.sendRedirect("Respuesta.jsp?mens='Ha ocurrido un error al registrar la cita'"+ e.toString());
+					
+				}
+			    	
+		    }
 	    }
-		
+	   
+	 
+	    
+	    
 	     }catch (Exception e) {
 			System.out.println("Error al castear las fechas"+ e.toString());
 		}
@@ -113,6 +112,8 @@ public class ServeltMedi extends HttpServlet {
 	
 			
 	}
+	     
+	}
 	
 	
-}
+

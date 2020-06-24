@@ -1,6 +1,7 @@
 package Dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,6 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import model.Citact;
+import model.Medicomdc;
 
 public class CitaDao {
 	public void agregarCita(Citact ci) {
@@ -37,6 +39,21 @@ public class CitaDao {
 		em.merge(ci);
 		em.flush();
 		em.getTransaction().commit();
+	}
+	public List<Object> revisarCita(String hora, Date fecha){
+		List<Object> Cita = new ArrayList();
+		EntityManager em;
+		EntityManagerFactory emf;
+		emf= Persistence.createEntityManagerFactory("WebMedic");
+		em = emf.createEntityManager();
+		try {
+			Cita = em.createQuery("FROM Citact AS c WHERE c.horaDC = '"+hora+"' AND c.fechaDC = '"+fecha+"' ").getResultList();
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			System.out.println("Error "+e.toString());
+		}
+		
+		return Cita;
 	}
 	
 	public List<Object> verCita(){
