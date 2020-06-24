@@ -15,7 +15,7 @@
 		</div>
 		<div class="menu">
 			<ul>
-				<li>
+				<li id="menuDoc">
 					<a href="">Soy Doctor &#x25BE;</a>
 					<ul class="subMenu">
 						<li>
@@ -36,15 +36,11 @@
 				</li>
 				<hr>
 				<li>
-					<a href="cita.jsp">Hacer Cita</a>
+					<a href="buscar.jsp">Ver Doctores</a>
 				</li>
 				<hr>
 				<li>
 					<a href="QuienesSomos.jsp">¿Quienes somos?</a>
-				</li>
-				<hr>
-				<li>
-					<a href="creditos.jsp">Creditos</a>
 				</li>
 			</ul>
 		</div>

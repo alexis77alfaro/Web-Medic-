@@ -39,24 +39,18 @@
 				</li>
 				<hr>
 				<li>
-					<a href="buscar.jsp">Buscar</a>
+					<a href="buscar.jsp">Ver Doctores</a>
 				</li>
 				<hr>
 				<li>
-					<a href="">¿Quienes somos?</a>
-				</li>
-				<hr>
-				<li>
-					<a href="creditos.jsp">Creditos</a>
+					<a href="QuienesSomos.jsp">¿Quienes somos?</a>
 				</li>
 			</ul>
 		</div>
 	</header>
 	
 	<div class="content">
-		<form class="buscador" action="ServeltMedi" method="POST">
-			<p>LISTA DE DOCTORES</p>
-		</form>
+		<h2 class="rotulo">LISTA DE DOCTORES</h2>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script type="text/javascript">
 		     $(document).ready(function(){
