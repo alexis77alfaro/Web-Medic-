@@ -50,16 +50,27 @@ public class ServeltMedi extends HttpServlet {
 	    Citact ct = new Citact();
 	    Medicomdc md = new Medicomdc();
 	    Pacientepct pt = new Pacientepct();
-	    
-	     try {
 	    SimpleDateFormat sd = new SimpleDateFormat("yyyy-dd-MM");
+	    SimpleDateFormat sdT = new SimpleDateFormat("hh:mm");
+	     try {
+	   
 	    Date dia = sd.parse(fecha);
 	    Date fechaActual = new Date();
+	    Date horad = sdT.parse(hora);
+	    Date finalh = sdT.parse("15:00");
+	    Date inicio = sdT.parse("8:00");
+	
+	    
 	    
 	    
 	    if(dia.before(fechaActual)) {
 	    	 response.sendRedirect("Respuesta.jsp?mens='No puedes agendar una cita antes de la fecha actual'");
 	    }else if(dia.after(fechaActual)) {
+	    	if(horad.before(inicio) && horad.after(finalh)) {
+	    		response.sendRedirect("Respuesta.jsp?mens='La cita no esta dentro del horario establecido'");
+	    	}else if(horad.after(inicio) && horad.before(finalh)){
+	    		
+	    	}
 	    	response.sendRedirect("Respuesta.jsp?mens='La cita se guardo con exito'");
 
 	    	try {
@@ -81,7 +92,7 @@ public class ServeltMedi extends HttpServlet {
 	    }
 		
 	     }catch (Exception e) {
-			System.out.println("Error al castear las fechas"+ e);
+			System.out.println("Error al castear las fechas"+ e.toString());
 		}
 	   
 	    

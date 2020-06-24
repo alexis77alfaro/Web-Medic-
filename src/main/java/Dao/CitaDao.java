@@ -48,7 +48,8 @@ public class CitaDao {
 		try {
 			verCita = em.createQuery("SELECT c.idCT, p.nombresPct, p.apellidosPct, c.estado, c.descripcionDC, c.fechaDC, c.horaDC, p.idPct, m.idMdc "
 					+ "FROM Citact AS c INNER JOIN Pacientepct AS p ON c.pacientepct.idPct = p.idPct "
-					+ "INNER JOIN Medicomdc AS m ON c.medicomdc.idMdc = m.idMdc").getResultList();
+					+ "INNER JOIN Medicomdc AS m ON c.medicomdc.idMdc = m.idMdc "
+					+ "WHERE c.estado = 'ESPERA' ").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println("Error "+e.toString());
