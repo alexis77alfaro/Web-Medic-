@@ -65,7 +65,7 @@
              <hr>
              <br>
              <li>
-                 <a class="btnAjustes" href="">Ajustes</a>
+                 <a class="btnAjustes" href="">Cerrar Sesión</a>
              </li>
          </ul>
      </div>

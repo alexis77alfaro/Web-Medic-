@@ -36,45 +36,46 @@
 				</li>
 				<hr>
 				<li>
-					<a href="buscar.jsp">Buscar</a>
+					<a href="buscar.jsp">Ver Doctores</a>
 				</li>
 				<hr>
 				<li>
 					<a href="QuienesSomos.jsp">¿Quienes somos?</a>
 				</li>
-				<hr>
-				<li>
-					<a href="creditos.jsp">Creditos</a>
-				</li>
 			</ul>
 		</div>
 	</header>
 	<form action="ServeltMedi" method="POST" >
-		<div class="citaPlace" >
+	<div class="content">
+				<div class="citaPlace" >
 			<div class="infMedic">
 				<div class="title">
 					<h3>DATOS GENERALES DEL MÉDICO</h3>
 				</div>
 				<div class="data">
 					<div class="datos">
-					    <h4>Paciente</h4>
-						<input type="text" value ="<%out.print(request.getParameter("idp"));%>" name="idp">
-					   <h4>Id Medico</h4>
-						<input type="text" value ="<%out.print(request.getParameter("imedi"));%>" name="iMedi">
-						<h4>Nombre Completo</h4>
-						<input type="text" value ="<%out.print(request.getParameter("nmedi"));%>">
-						<h4>Especialidad</h4>
-						<input type="text" value ="<%out.print(request.getParameter("espe"));%>">
-						<h4>Telefono</h4>
-						<input type="text" value ="<%out.print(request.getParameter("tel"));%>">
-						<h4>Correo Electronico</h4>
-						<input type="text" value ="<%out.print(request.getParameter("corr"));%>">
+						<div class="frm">
+							<div class="formulario">
+							    <h4 class="rotulo">Paciente</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("idp"));%>" name="idp">
+								<h4 class="rotulo">Id Medico</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("imedi"));%>" name="iMedi">
+								<h4 class="rotulo">Nombre Completo</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("nmedi"));%>">
+								<h4 class="rotulo">Especialidad</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("espe"));%>">
+								<h4 class="rotulo">Telefono</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("tel"));%>">
+								<h4 class="rotulo">Correo Electronico</h4>
+								<input type="text" class="control" readonly="readonly" value ="<%out.print(request.getParameter("corr"));%>">
+							</div>
+						</div>
 					</div>
 					<div class="horario">
 						<h3>HORARIO</h3>
-						<table>
+						<table class="resultTable">
 							<thead>
-									<tr>
+								<tr>
 									<th>
 										Día
 									</th>
@@ -96,16 +97,39 @@
 				<div class="frm">
 					<div class="formulario">
 		                <label class="rotulo" for="Cita">Descripción de la Cita:</label>
-	                	<input class="control" type="text" placeholder="Descripción de su cita..." name ="desc">
-            	    	<label class="rotulo" for="Dia">Dia:</label>
-        	    	    <input class="control" type="date" name ="dia">
+	                	<input class="control" type="text" placeholder="Descripción de su cita..." name ="desc" required>
+	                	<label class="rotulo" for="Dia">Fecha:</label>
+        	    	    <input class="control" type="date" name ="dia" required>
     	    	        <label class="rotulo" for="Hora">Hora:</label>
-	    	            <input class="control" type="time"  name ="hora">
+	    	            <input class="control" type="time"  name ="hora" required>
     		            <input class="button" type="submit" value="Solicitar">
 		            </div>
 				</div>
 			</div>
 		</div>
+		<div class="horarioDoc">
+			<div class="divisionDoc">
+				<h3>Agenda del Doctor</h3>
+				<table class="resultTable">
+					<thead>
+						<tr>
+							<th>
+								Día
+							</th>
+							<th>
+								Hora
+							</th>
+							<th>
+								Fecha
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 	</form>
 	
 	<div class="footer">
