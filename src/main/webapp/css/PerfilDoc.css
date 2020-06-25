@@ -1,11 +1,16 @@
 @charset "ISO-8859-1";
 
+body{
+background-image:url("https://previews.123rf.com/images/peshkova/peshkova1801/peshkova180100479/92883244-m%C3%A9dico-con-pantalla-m%C3%A9dica-digital-salud-en-el-fondo-borroso-exposicion-doble.jpg");
+background-size:cover;
+}
+
 .header{
     text-align: center;
     height: 300px;
     padding: 12px;  
     background-image: url("https://img.freepik.com/vector-gratis/doctores-que-vacunan-familia-consultorio_24877-62986.jpg?size=626&ext=jpg") ;
-    border-radius: 1%;
+    border-bottom:3px solid #fff;
 }
 .avatar{
     width: 200px;
@@ -13,6 +18,7 @@
     border-radius: 50%;
     margin-top: 160px;
     cursor:pointer;
+    border: 2px solid #000;
 }
 
 .nombredeusuario{
@@ -35,7 +41,8 @@
 
 .social a{
     text-decoration: none;
-    color: #ad0000;
+    font-size:40px;
+   color:rgb(187, 40, 40);
 }
 
 .social a:hover{
@@ -43,8 +50,8 @@
 }
 
 .icon{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     background-size: cover;
 }
@@ -263,6 +270,7 @@ padding: 10px;
     margin: auto;/*para que se centre cuando pase los 1000px */
 box-shadow: 0 0 20px #000;
 border-radius: 15px;
+background-color:#fff;
 }
 
 .table{
@@ -392,7 +400,7 @@ background-color: rgba(0, 0, 0, 0.2);
     /* margin-top: 50px; */
     width: auto; /*1349px*/
     height: auto;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -493,26 +501,26 @@ border-radius: 15px;
     /* margin-top: 20px; */
     /* margin-left: 10px; */
     width: 400px;
-    height: 300px;
+    height: 350px;
     background-color: #fff;
     border-radius: 15px;
-   
+    box-shadow: 0 0 15px #000;
+    border: 1px solid #000;
 }
 
 
 #agenda .container2{
-    width: 100%;
-    max-width: 1000px;/*limite de su ancho*/
-    margin: auto;/*para que se centre cuando pase los 1000px */
+  /*   width: 100%;
+    max-width: 1000px;limite de su ancho
+    margin: auto;para que se centre cuando pase los 1000px
     border-radius: 15px;
 border: 1px solid #000;
-box-shadow: 0 0 15px #000;
+box-shadow: 0 0 15px #000; */
 
 }
 
  #agenda .table2{
     width: 100%;
-    /* border: 1px solid #ccc; */
     border-collapse: collapse;
     margin: 0;
     padding: 0;
@@ -528,7 +536,6 @@ box-shadow: 0 0 15px #000;
     margin: 11px 0px;
     background-color: #f77878;
     border-radius: 15px;
-    
 }
 
 .table2 button{
@@ -562,7 +569,7 @@ box-shadow: 0 0 15px #000;
     padding: 8px;
     text-align: center;
     font-family: fantasy;
-    /* border:1px solid rgb(99, 98, 98); */
+     border-bottom:2px solid #000;
    
 }
 

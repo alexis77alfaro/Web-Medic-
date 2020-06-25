@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
     <title>Perfil Del Doctor</title>
     <link rel="stylesheet" type="text/css" href="css/PerfilDoc.css">
     <link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
@@ -107,9 +107,9 @@
         <br>
         <br>
         
-        <div class="container1">
+       <!--  <div class="container1">
         <div class="infoper">
-            <h2>Información Personal <button class="opcioni">Opciones</button> </h2>
+            <h2>Información Personal </h2>
         
          <h4 id="espacio">Dirección: <span>bla bla bla bla bla bla</span></h4>
          <br>
@@ -123,7 +123,7 @@
         <div class="horario">
             <div class="container2">
                 <table class="table1">
-                    <caption>Horarios De Consulta <button class="opcionh">Opciones</button> </caption>
+                    <caption>Horarios De Consulta </caption>
                     <thead>
                         <tr>
                             <th>Dia</th>
@@ -160,14 +160,14 @@
                 </table>
             </div>
         </div>
-    </div>
+    </div> -->
     <br>
     <br>
     <br>
     <br>
         <div class="container">
         <table class="table" id="cita">
-            <caption>Solicitudes De Pacientes  <button class="opciones">Opciones</button></caption>
+            <caption>Solicitudes De Pacientes </caption>
            
             <thead>
                 <tr>
@@ -194,29 +194,28 @@
     <br>
     
      <div id="general">
-    <div id="proximacita">
-        <h2>Proxima cita medica <button class="opcionc">Opciones</button> </h2>
-        <h4>Paciente: <span>Edwin Rivas</span></h4>
+    <!-- <div id="proximacita">
+        <h2>Proxima cita medica</h2>
+        <h4>Paciente: <span></span></h4>
         <br>
         <br>
-        <h4>Descripción Del Paciente: <span>bla bla bla bla jjjjjjjjjjjjjalgo algo clgo algo</span></h4>
+        <h4>Descripción Del Paciente: <span></span></h4>
         <br>
         <br>
-        <h4>Descripción De La Cita: <span>Dolor en la espalda, con complicaciones arteriales severas, fuerte
-        migraña</span></h4>
+        <h4>Descripción De La Cita: <span></span></h4>
         <br>
         <br>
-        <h4>Hora De La Cita: <span>3:00 p.m</span></h4>
-    </div>
-    <div id="aunnosesabe">
+        <h4>Hora De La Cita: <span></span></h4>
+    </div> -->
+<!--     <div id="aunnosesabe">
     <button class="opcionn">Opciones</button>
    <h2>Aun no se nos ocurre nada XDXD</h2>
-    </div>
+    </div> -->
     
     <div id="agenda">
         <div class="container2">
             <table class="table2" id="aprobadas">
-                <caption>Agenda de la semana <button>Opciones</button></caption>
+                <caption>Agenda de la semana </caption>
                 <thead>
                     <tr>
                         <th>Paciente</th>

@@ -165,7 +165,7 @@
         <div id="solicitudes">
             <div class="container1">
                 <table class="table">
-                    <caption>Control De Citas <button class="opcion">Opciones</button> </caption>
+                    <caption>Control De Citas</caption>
                     <thead>
                         <tr>
                             <th>Paciente</th>
@@ -176,55 +176,55 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                         <!--    <td>Juan Quintanilla</td>
+                      <!--   <tr>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                          <!--   <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                         <!--    <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                   <!--          <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                         <!--    <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                        <!--     <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
+                            <td>2:00 p.m</td>
                         </tr>
                         <tr>
-                         <!--    <td>Juan Quintanilla</td>
+                            <td>Juan Quintanilla</td>
                             <td>Dolor de cabeza</td>
                             <td>Dr. Edwin Rivas</td>
                             <td>26 de junio de 2020</td>
-                            <td>2:00 p.m</td> -->
-                        </tr>
+                            <td>2:00 p.m</td>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
