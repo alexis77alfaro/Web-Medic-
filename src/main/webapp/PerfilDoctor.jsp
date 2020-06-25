@@ -35,7 +35,7 @@
                 <td>${item[5]}</td>
                 <td>${item[6]}</td>
                 <td>
-                <a href="ServeltCita?idcita=${item[0]}&idMed=${item[7]}&idPac=${item[8]}&desc=${item[4]}&dia=${item[5]}&hora=${item[6]}" class="btn btn-info">Aprobar</a>
+                <a href="ServeltCita?idcita=${item[0]}&idMed=${item[8]}&idPac=${item[7]}&desc=${item[4]}&dia=${item[5]}&hora=${item[6]}" class="btn btn-info">Aprobar</a>
                 </td>
        
             `
