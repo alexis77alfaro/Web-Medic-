@@ -99,7 +99,9 @@
 				</li>
 				<hr>
 				<li>
-					<a class="btnAjustes" href="">Cerrar Sesión</a>
+					<form action="ServeltPaciente" method="post">
+						<a class="btnAjustes" href="index.jsp" name="btnCerrarSesion">Cerrar Sesion</a>
+					</form>
 				</li>
 			</ul>
 		</div>

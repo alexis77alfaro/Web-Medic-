@@ -77,7 +77,7 @@
 		<div class="menu">
 			<ul>
 		        <li>
-        	         <a class="btnAjustes" href="">Cerrar Sesión</a>
+        	         <a class="btnAjustes" href="index.jsp">Cerrar Sesión</a>
             	 </li>
 			</ul>
 		</div>

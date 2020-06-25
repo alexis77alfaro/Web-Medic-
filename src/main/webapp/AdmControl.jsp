@@ -225,7 +225,7 @@
              <hr>
              <br>
              <li>
-                 <a class="btnAjustes" href="">Cerrar Sesión</a>
+                 <a class="btnAjustes" href="LoginAdmin.jsp">Cerrar Sesión</a>
              </li>
          </ul>
      </div>
