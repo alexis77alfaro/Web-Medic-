@@ -120,6 +120,25 @@
 	color: #000;
 }
 
+.btnRegresar{
+    padding: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 10px;
+	background-color: rgb(27, 93, 214);
+	border: 2px solid #FFF;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+}
+
+.btnRegresar:hover{
+	background-color:rgb(64, 153, 52);
+	color:#fff;
+	cursor:pointer;
+}
+
 .footer{
     background: #8ccbbe;
     color: #000;
