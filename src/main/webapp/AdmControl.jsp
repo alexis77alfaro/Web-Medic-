@@ -271,7 +271,7 @@
 					
 					<label class="rotulo">Especialidad del doctor: </label>
 					<input type="text" class="control" id="especialidad" name="especialidad" placeholder="Escriba la especialidad del doctor aquí..."
-					maxlength="20" pattern="[A-Za-z]{20}" title="introduces máximo 20 letras" required>
+					maxlength="20" pattern="[A-Za-z]{1,20}" title="introduces máximo 20 letras" required>
 					
 					<button type="submit" class="btnNext extraSpaceBtn" id="send">Confirmar Registro</button>
 				</div>
