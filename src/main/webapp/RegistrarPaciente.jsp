@@ -135,13 +135,6 @@
                     <br>  
                     <br>
 
-                    <div class="col-sm-12 form-group"> 
-                        <label>Confirme su contraseña</label>
-                        <input type="password" id="confirmar" class="form-control" name="txtconfirmar" maxlength="16" placeholder="Confirmar"
-                      min="4" max="16" title="confirme su contraseña" pattern="[a-z-0-9]{4,16}" required>
-
-                    </div>
-
                 </div>
              
 
