@@ -10,13 +10,136 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="http://code.jquery.com/jquery-latest.js"> </script>
+  
+ <script type="text/javascript">
+	$(document).ready(function(){
+		$("#correo").prop('disabled', true);
+		$("#pas").prop('disabled', true);
+		$("#especialidad").prop('disabled', true);
+		$("#send").prop('disabled', true);
+		$("#nombres").prop('disabled', false);
+		$("#apellidos").prop('disabled', false);
+		$("#edad").prop('disabled', false);
+		$("#direccion").prop('disabled', false);
+		$("#telefono").prop('disabled', false);
+		$("#next").prop('disabled', false);
+
+		var txtCorreo = document.getElementById("correo");
+		txtCorreo.style.backgroundColor = 'grey';
+		txtCorreo.style.border = 'none';
+		txtCorreo.style.borderRadius = '10px';
+		var txtPas = document.getElementById("pas");
+		txtPas.style.backgroundColor = 'grey';
+		txtPas.style.border = 'none';
+		txtPas.style.borderRadius = '10px';
+		var txtEsp = document.getElementById("especialidad");
+		txtEsp.style.backgroundColor = 'grey';
+		txtEsp.style.border = 'none';
+		txtEsp.style.borderRadius = '10px';
+		var btnSend = document.getElementById("send");
+		btnSend.style.backgroundColor = '#888888';
+
+		$("#correo").val('');
+		$("#pas").val('');
+		$("#especialidad").val('');
+		$("#send").val('');
+		$("#nombres").val('');
+		$("#apellidos").val('');
+		$("#edad").val('');
+		$("#direccion").val('');
+		$("#telefono").val('');
+
+		$( "#next" ).click(function(){
+
+			var txtName = document.getElementById("nombres").value;
+			var txtLName = document.getElementById("apellidos").value;
+			var txtAge = document.getElementById("edad").value;
+			var txtDirect = document.getElementById("direccion").value;
+			var txtPhone = document.getElementById("telefono").value;
+
+			if(txtName=='' || txtLName=='' || txtAge=='' || txtDirect=='' || txtPhone==''){
+				alert('Para continuar con el Registro de un Nuevo Doctor debe rellenar todos los campos solicitados');
+			} else{
+				$("#correo").prop('disabled', false);
+				$("#pas").prop('disabled', false);
+				$("#especialidad").prop('disabled', false);
+				$("#send").prop('disabled', false);
+
+				$("#nombres").prop('disabled', true);
+				$("#apellidos").prop('disabled', true);
+				$("#edad").prop('disabled', true);
+				$("#direccion").prop('disabled', true);
+				$("#telefono").prop('disabled', true);
+				$("#next").prop('disabled', true);
+
+				var txtName = document.getElementById("nombres");
+				txtName.style.backgroundColor = 'grey';
+				txtName.style.border = 'none';
+				txtName.style.borderRadius = '10px';
+				var txtLName = document.getElementById("apellidos");
+				txtLName.style.backgroundColor = 'grey';
+				txtLName.style.border = 'none';
+				txtLName.style.borderRadius = '10px';
+				var txtAge = document.getElementById("edad");
+				txtAge.style.backgroundColor = 'grey';
+				txtAge.style.border = 'none';
+				txtAge.style.borderRadius = '10px';
+				var txtDirect = document.getElementById("direccion");
+				txtDirect.style.backgroundColor = 'grey';
+				txtDirect.style.border = 'none';
+				txtDirect.style.borderRadius = '10px';
+				var txtPhone = document.getElementById("telefono");
+				txtPhone.style.backgroundColor = 'grey';
+				txtPhone.style.border = 'none';
+				txtPhone.style.borderRadius = '10px';
+				var btnNext = document.getElementById("next");
+				btnNext.style.backgroundColor = '#888888';
+
+				var txtCorreo = document.getElementById("correo");
+				txtCorreo.style.backgroundColor = 'transparent';
+				txtCorreo.style.borderBottom = "solid 1px #FFF";
+				txtCorreo.style.borderRadius = '0';
+				var txtPas = document.getElementById("pas");
+				txtPas.style.backgroundColor = 'transparent';
+				txtPas.style.borderBottom = "solid 1px #FFF";
+				txtPas.style.borderRadius = '0';
+				var txtEsp = document.getElementById("especialidad");
+				txtEsp.style.backgroundColor = 'transparent';
+				txtEsp.style.borderBottom = "solid 1px #FFF";
+				txtEsp.style.borderRadius = '0';
+				var btnSend = document.getElementById("send");
+				btnSend.style.backgroundColor = '#79d70f';
+
+
+				$( "#send" ).click(function(){
+					var txtC = document.getElementById("correo").value;
+					var txtP = document.getElementById("pas").value;
+					var txtE = document.getElementById("especialidad").value;
+
+					if(txtC=='' || txtP=='' || txtE==''){
+						alert('Termina de ingresar los últimos datos para Confirmar el Registro');
+					} else {
+						$("#nombres").prop('disabled', false);
+						$("#apellidos").prop('disabled', false);
+						$("#edad").prop('disabled', false);
+						$("#direccion").prop('disabled', false);
+						$("#telefono").prop('disabled', false);
+						$("#next").prop('disabled', false);
+					}
+				});
+			}
+		});
+	});
+</script>
+  
+  
 
 <script type="text/javascript">
 
 	$(document).ready(function(){
 		
 			
-			$.post('ServeltControlCita',{
+			$.post('ServeltCitaControl',{
 
 			}, function(respose){
 
@@ -38,6 +161,43 @@
                 <td> ${datos[i][2]} </td>
                 <td> ${datos[i][3]} </td>
                 <td> ${datos[i][4]} </td>
+                </tr>
+                `
+				
+					
+					});
+				});
+				
+			</script>
+			
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+			
+			$.post('ServeltMostrarMedico',{
+
+			}, function(respose){
+
+			let datos = JSON.parse(respose);
+
+            var tabladatos = document.getElementById('medicos');
+            for(var i = 0; i < datos.length; i++)
+            
+
+				
+			
+
+            	medicos.innerHTML +=`
+
+                <tr>
+
+                <td> ${datos[i][0]} </td>
+                <td> ${datos[i][1]} </td>
+                <td> ${datos[i][2]} </td>
+                <td> ${datos[i][3]} </td>
+                
                 </tr>
                 `
 				
@@ -73,63 +233,55 @@
  </header>
  <!-- //header -->
 
-
-<div id="encabezado">
-        <h3>Bienvenido</h3>
-        <h3>Nombre</h3>
-    </div>
+<div class="contentCSSAD">
+		<div class="containerCSSAD">
+			<h2>Bienvenido al Panel de Administración</h2>
+			<form class="frmCSSAD" action="ServeltAgregarDoctor" method="post">
+				<div class="panelCSSAD" id="panel1">
+					<label class="rotulo">Nombres: </label>
+					<input type="text" class="control" id="nombres" name="nombre" placeholder="Digite ambos nombres aquí..." 
+					id="nombre" maxlength="20" pattern="[A-Za-z]{3,20}" title="introduces máximo 20 letras" required>
+					
+					<label class="rotulo">Apellidos: </label>
+					<input type="text" class="control" id="apellidos" name="apellido" placeholder="Digite ambos apellidos aquí..."
+					maxlength="20" pattern="[A-Za-z]{3,20}" title="introducir entre 3 y 20 letras" required>
+					
+					<label class="rotulo">Edad: </label>
+					<input type="number" class="control" id="edad" name="edad" min="18" max="100" placeholder="Seleccione la edad"
+					min="18" max="100"  title="introducir edad entre 18 y 100" required>
+					
+					<label class="rotulo">Dirección: </label>
+					<input type="text" class="control" id="direccion" name="direccion" placeholder="Escriba la dirección completa aquí..."
+					 maxlength="50" title="introducir entre 1 y 50 letras" required>
+					
+					<label class="rotulo">Teléfono: </label>
+					<input type="text" class="control" id="telefono" name="telefono" placeholder="Escriba el numero de contacto telefónico...."
+					 maxlength="8" pattern="[0-9]{8}" title="introducir número telefonico de 8 cifras" required>
+					
+					<span class="btnNext" id="next">Continuar</span>
+				</div>
+				<div class="panelCSSAD" id="panel2">
+					<label class="rotulo">Correo electrónico: </label>
+					<input type="text" class="control" id="correo" name="correo" placeholder="Escriba el correo elctronico aquí..."
+					 maxlength="30" title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required>
+					
+					<label class="rotulo">Contraseña: </label>
+					<input type="password" class="control" id="pas" name="contra" placeholder="Escriba la contraseña aquí..."
+					 maxlength="16" min="4" max="16"  title="introducir contraseña entre 4 y 16 digitos" pattern="[a-z-0-9]{4,16}" required>
+					
+					<label class="rotulo">Especialidad del doctor: </label>
+					<input type="text" class="control" id="especialidad" name="especialidad" placeholder="Escriba la especialidad del doctor aquí..."
+					maxlength="20" pattern="[A-Za-z]{20}" title="introduces máximo 20 letras" required>
+					
+					<button type="submit" class="btnNext extraSpaceBtn" id="send">Confirmar Registro</button>
+				</div>
+			</form>
+		</div>
+	</div>
 
 
     <div id="container">
-        <div id="ingresardoctores">
-            <form>
-
-                <h3>Registro De Doctores</h3>
-
-                <Label for="Nombres">Nombres:</Label>
-                <input type="text" placeholder="Ingrese los Nombres">
-
-                <label for="Apellidos">Apellidos:</label>
-                <input type="text" placeholder="Ingrese los apellidos">
-
-                <label for="Edad">Edad:</label>
-                <input type="number" min="18" max="100" placeholder="Ingrese una edad">
-
-                <label for="Direccion">Dirección:</label>
-                <input type="text" placeholder="Ingrese una Dirección">
-
-                <label for="Telefono">Teléfono:</label>
-                <input type="text" placeholder="Ingrese un número teléfono">
-
-                <label for="Correo">Correo Electrónico:</label>
-                <input type="text" placeholder="Ingrese un correo electrónico">
-
-                <label for="Password">Contraseña:</label>
-                <input type="Password" placeholder="Ingrese una contraseña">
-
-
-                <button class="buttonC" type="reset">Cancelar</button>
-                <button class="buttonA" type="submit">Siguiente</button>
-            </form>
-        </div>
-
-        <div class="especialidad">
-            <form>
-
-                <h2>Especialidad de Doctores</h2>
-
-                <label for="Id">ID</label>
-                <input type="text" placeholder="Digite Id">
-
-                <label for="Especialidad">Especialidad</label>
-                <input type="text" name="especialidad" placeholder="Digite una especialidad">
-
-
-                <button class="btn-A" type="submit">Agregar Doctor</button>
-                <button class="btn-C" type="reset">Cancelar</button>
-            </form>
-        </div>
-
+    
         <div class="resultado" id="resultados">
             <table class="resultadoTabla" id="medicos">
                 <thead>
@@ -164,7 +316,7 @@
      <div id="part2">
         <div id="solicitudes">
             <div class="container1">
-                <table class="table">
+                <table class="table" id="tabla">
                     <caption>Control De Citas <button class="opcion">Opciones</button> </caption>
                     <thead>
                         <tr>

@@ -10,6 +10,45 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+			
+			$.post('ServeltEstadoCitaSoli',{
+
+			}, function(respose){
+
+			let datos = JSON.parse(respose);
+
+            var tabladatos = document.getElementById('EstadoSoli');
+            for(var i = 0; i < datos.length; i++)
+            
+
+				
+			
+
+            	EstadoSoli.innerHTML +=`
+
+                <tr>
+
+                <td> ${datos[i][0]} </td>
+                <td> ${datos[i][1]} </td>
+                <td> ${datos[i][2]} </td>
+                <td> ${datos[i][3]} </td>
+                <td> ${datos[i][4]} </td>
+                
+                </tr>
+                `
+				
+					
+					});
+				});
+				
+			</script>
+	
+	
 </head>
 
 <%
@@ -83,18 +122,25 @@
 			</div>
 			<div class="misCitas">
 				<h2>Estado de mis citas solicitadas</h2>
-				<table class="resultTable">
+				<table class="resultTable" id="EstadoSoli">
 					<thead>
 						<tr>
 							<th>
 								Doctor
 							</th>
+							
+							<th>
+								Descripción
+							</th>
+							
 							<th>
 								Fecha
 							</th>
+							
 							<th>
 								Hora
 							</th>
+							
 							<th>
 								Estado
 							</th>

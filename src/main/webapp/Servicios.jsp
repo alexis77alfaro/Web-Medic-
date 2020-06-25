@@ -1,9 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web Medic</title>
+<title>Servicios</title>
 	<link rel="stylesheet" type="text/css" href="css/head&footStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+
+	<link rel="stylesheet" type="text/css" href="css/Servicios.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
@@ -45,57 +48,66 @@
 			</ul>
 		</div>
 	</header>
-	<div class="content">
-		<div class="anuncio">
-			<h5>Ante la emergencia del COVID-19<br>¡Cuídate, eres lo más importante para nosotros!</h5>
-			<div class="logIn">
-<!--				<span>¿Eres nuevo? ¡Regístrate! &#x279E;</span> -->
-				<a href="RegistrarPaciente.jsp">REGISTRARME</a>
-<!--				<span>Si ya estás registrado, Inicia Sesión &#x279E;</span> -->
-				<a href="LoginPaciente.jsp">INICIAR SESIÓN</a>
-			</div>
+
+<div class="content">
+		<div class="encabezado">
+			<h2>Web Medic</h2>
+			<h3>Nuestros servicios</h3>
 		</div>
-		<div class="principal">
-			<div class="item">
-				<div class="circle">
-					<img src="img/buscar.png">
-				</div>
-				<span>BUSCA</span>
-				<p>Busca al especialista en la salud que necesites.</p>
-			</div>
-			<div class="item">
-				<div class="circle">
-					<img src="img/agenda.png">
-				</div>
-				<span>AGENDA</span>
-				<p>Agenda la cita medica a tu propia conveniencia</p>
-			</div>
-			<div class="item">
-				<div class="circle">
-					<img src="img/agenda2.png">
-				</div>
-				<span>CONFIRMA</span>
-				<p>Recibiras la confirmacion de la cita medica.</p>
-			</div>
-		</div>
-		<div class="inf">
-			<h1>Web Medic</h1>
-			<h2>Tenemos el sistema informatico apropiado para ti.</h2>
-			<p>
-				Somos expertos en el area informatica y ofrecemos la posibilidad de
-				acercarte la solucion medica que necesitas.
+		<div class="servicios">
+			<div class="panel">
+				<h4 class="title">Perfil de Paciente</h4>
+				<p class="text">
+				<ul>
+				    <li>Perfil de paciente con sus datos personales</li><br>
+					<li>Consultar lista de Medicos y realizar una Cita personalizada donde puede elegir
+					el dia y la hora que desee</li><br>
+					<li>Tiene su apartado de poder ver el estado de las citas solicitadas a los doctores,
+					Ver si la cita esta aprovada o no</li>
+					</ul>
+					
 			</p>
-		</div>
-		<div class="rotulo">
-			<div class="rItems">
-				<h2>¿QUÉ TE OFRECEMOS?</h2>
-				<p>
-					WEB MEDIC ES UN SISTEMA INFORMÁTICO DISEÑADO PARA ESTE HOSPITAL CON LA FINALIDAD DE AUTOMATIZAR EL PROCESO DE LA AGENDA DE CITAS MÉDICAS, PROPORCIONANDO UNA MANERA SENCILLA Y EFICAZ DE LLEVAR A CABO ÉSTE PROCESO CON EL FIN DE DIRIGIR LA MÁXIMA ATENCIÓN A LO QUE DE VERDAD ES IMPORTANTE: NUESTROS CLIENTES.
+			</div>
+			<div class="panel">
+				<h4 class="title">Perfil de Médico</h4>
+				<p class="text">
+				<ul>
+				<li>Perfil de médico con sus datos personales</li><br>
+				
+				<li>Visualizar las solicitudes de los pacientes como tambien la potestad de
+				aprobar las citas que esten a su alcance para atender durtante todas las semanas</li><br>
+				<li>Tambien ofrece una agenda de la semana actual personalizada para llevar un control de atención
+				muy ordenado</li>
+					</ul>
+				</p>
+			</div>
+			<div class="panel">
+				<h4 class="title">Especialidades de Médico</h4>
+				<p class="text">
+				<ul>
+				 <li>Dentro de las especialidades tenemos variedad de médicos con experiencia en una área definida,
+				 de las cuales se encuentran las siguientes:</li><br>
+				 <li>Cardiólogia</li><br>
+				 <li>Psiquiatra</li><br>
+				 <li>Reumatologia</li><br>
+				 <li>Pediatra</li><br>
+				 <li>Ortopediatria</li><br>
+				 <li>Neurologia</li>
+				 </ul>
 				</p>
 			</div>
 		</div>
 	</div>
-	 <div class="footer">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+ <div class="footer">
         <div class="footer-contenido">
             <div class="footer-seccion sobre">
                 <h1 class="logo-text"><span id="SU">Clinic</span><span>Web</span></h1>
@@ -133,5 +145,8 @@
             </div>
         
     </div>
+
+
+
 </body>
 </html>

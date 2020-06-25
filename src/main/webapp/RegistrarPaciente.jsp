@@ -77,8 +77,8 @@
                 <div class="row">
                     <div class="col-sm-12 form-group">
                         <label class="">Ingrese su Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre(s)" name="txtnombres"
-                         id="nombre" maxlength="20" pattern="[A-Za-z]{3,20}"
+                        <input type="text" class="form-control"  placeholder="Nombre(s)" name="txtnombres"
+                         id="nombre" maxlength="20" pattern="[A-Z a-z]{3,20}"
                         title="introduce entre 3 y 20 letras" required>
                     </div>
                     <br>
@@ -86,7 +86,7 @@
                     <div class="col-sm-12 form-group">
                         <label >Ingrese su apellido</label>
                         <input type="text"  id="apellido" class="form-control" placeholder="Apellido(s)" name="txtapellidos" maxlength="20"
-                        pattern="[A-Za-z]{3,20}" title="introducir entre 3 y 20 letras" required>
+                        pattern="[A-Z a-z]{3,20}" title="introducir entre 3 y 20 letras" required>
                     </div>
                     <br>
                     <br>
@@ -120,7 +120,7 @@
 
                     <div class="col-sm-12 form-group"> 
                         <label>Ingrese su Correo</label>
-                        <input type="text" id="usuario" placeholder="Usuario" class="form-control"  maxlength="30" name="txtusuario"
+                        <input type="email" id="usuario" placeholder="Usuario" class="form-control"  maxlength="30" name="txtusuario"
                           title="introduce tu correo electronico" pattern="[a-z-0-9]+@+[a-z]+.+[a-z]" required >
 
                     </div> 

@@ -58,6 +58,30 @@
   	<description></description>
   	<servlet-class>Controler.ServeltAgregarMedico</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeltAgregarDoctor</servlet-name>
+  	<display-name>ServeltAgregarDoctor</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltAgregarDoctor</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeltCitaControl</servlet-name>
+  	<display-name>ServeltCitaControl</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltCitaControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeltMostrarMedico</servlet-name>
+  	<display-name>ServeltMostrarMedico</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltMostrarMedico</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeltEstadoCitaSoli</servlet-name>
+  	<display-name>ServeltEstadoCitaSoli</display-name>
+  	<description></description>
+  	<servlet-class>Controler.ServeltEstadoCitaSoli</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PacienteControler</servlet-name>
   	<url-pattern>/PacienteControler</url-pattern>
@@ -93,5 +117,21 @@
   <servlet-mapping>
   	<servlet-name>ServeltAgregarMedico</servlet-name>
   	<url-pattern>/ServeltAgregarMedico</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltAgregarDoctor</servlet-name>
+  	<url-pattern>/ServeltAgregarDoctor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltCitaControl</servlet-name>
+  	<url-pattern>/ServeltCitaControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltMostrarMedico</servlet-name>
+  	<url-pattern>/ServeltMostrarMedico</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeltEstadoCitaSoli</servlet-name>
+  	<url-pattern>/ServeltEstadoCitaSoli</url-pattern>
   </servlet-mapping>
 </web-app>

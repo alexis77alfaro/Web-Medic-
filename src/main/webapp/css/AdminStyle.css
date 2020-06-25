@@ -1,8 +1,10 @@
 @charset "ISO-8859-1";
 
 *{
-    padding: 0px;
-    margin: 0px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
 Body{
@@ -12,7 +14,7 @@ Body{
 
 #container{
     margin: auto;
-    width: auto; /*1349px*/
+    width: auto;
     height: auto;
     background-color: transparent;
     display: flex;
@@ -123,7 +125,7 @@ opacity: .75;
 .container1{
     width: 100%;
     height:100%;
-    max-width: 1000px;/*limite de su ancho*/
+    max-width: 1000px;/limite de su ancho/
     margin: auto;/*para que se centre cuando pase los 1000px */
     background:transparent;
     border-radius: 15px;
@@ -301,7 +303,7 @@ opacity: .75;
   align-items: center;
   padding: 10px;
   margin-top: 130px;
-  height: 100px;
+ 
   width: 52%;
   background-color: black;
   border-radius: 20px;
@@ -328,4 +330,92 @@ td {
 .resultadoTabla tr:hover td {
   background-color: rgb(146, 138, 138);
   color: #fff;
+}
+
+.contentCSSAD{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.containerCSSAD{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 50px 0;
+}
+
+.frmCSSAD{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 50px 0;
+}
+
+.panelCSSAD{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 650px;
+	margin: 5px;
+	padding: 20px;
+	border: solid 2px #FFF;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, .9);
+}
+
+.rotulo{
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 0;
+	color: #FFF;
+}
+
+.control{
+	font-weight: bold;
+	font-size: 18px;
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 10px;
+	color: #FFF;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	border-bottom: solid 1px #FFF;
+}
+
+.btnNext{
+	cursor: default;
+	align-self: flex-end;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	background-color: #79d70f;
+	color: #FFF;
+	width: 45%;
+	padding: 10px;
+	margin-right: 30px;
+	margin-top: 50px;
+	border: none;
+	border-radius: 10px;
+}
+
+.btnNext:hover{
+	cursor: pointer;
+	background-color: #a8df65;
+	color: #000;
+}
+
+.extraSpaceBtn{
+	margin-top: 240px;
 }

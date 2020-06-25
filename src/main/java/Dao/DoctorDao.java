@@ -12,6 +12,7 @@ import model.Medicomdc;
 import model.Pacientepct;
 
 public class DoctorDao {
+	
 	public List<Object> verDoc(){
 		List<Object> verDoc = new ArrayList();
 		EntityManager em;
@@ -48,6 +49,7 @@ public class DoctorDao {
 		
 	}
 	
+	
 	 public void agregarMedico(Medicomdc me){
 		   EntityManager em;
 			EntityManagerFactory emf;
@@ -61,5 +63,61 @@ public class DoctorDao {
 			em.getTransaction().commit();
 		   
 	   }
+	 
+	 public void EspecialidadDoctor(Especialidadesmdc ed){
+		   EntityManager em;
+			EntityManagerFactory emf;
+			emf= Persistence.createEntityManagerFactory("WebMedic");
+			em = emf.createEntityManager();
+			
+			em.getTransaction().begin();
+			em.persist(ed);
+			em.flush();
+			em.getTransaction().commit();
+		   
+	   }
+	 
+	 
+	 public List<Object> UltimoIdDoctor(){
+			List<Object> ultimo = new ArrayList();
+			EntityManager em;
+			EntityManagerFactory emf;
+			emf= Persistence.createEntityManagerFactory("WebMedic");
+			em = emf.createEntityManager();
+			try {
+				em.getTransaction().begin();
+				ultimo = em.createQuery("SELECT MAX(idMdc) AS id FROM Medicomdc").getResultList();
+				em.getTransaction().commit();
+			} catch (Exception e) {
+				System.out.println("Error "+e.toString());
+			}
+			
+			return ultimo;
+		}
+	 
+	
+	 public List<Object> mostrarMedico(){
+			List<Object> mostrar = new ArrayList();
+			EntityManager em;
+			EntityManagerFactory emf;
+			emf= Persistence.createEntityManagerFactory("WebMedic");
+			em = emf.createEntityManager();
+			try {
+				em.getTransaction().begin();
+				mostrar = em.createQuery("SELECT m.idMdc, m.nombresMdc, m.apellidosMdc, e.especialidadEspMdc" 
+						+ " FROM Especialidadesmdc AS e" 
+						+ " INNER JOIN Medicomdc AS m ON e.medicomdc.idMdc = m.idMdc").getResultList();
+				em.getTransaction().commit();
+			} catch (Exception e) {
+				System.out.println("Error "+e.toString());
+			}
+			
+			return mostrar;
+		}
+		
+	 
+	 
+	 
+	 
 
 }
