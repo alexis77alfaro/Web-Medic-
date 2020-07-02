@@ -60,7 +60,7 @@ public class ServeltPaciente extends HttpServlet {
 				
 				if(verificarPac==1) {
 					
-					 for (Pacientepct nombrePct:pdao.logInPaciente(pac)) {
+					 /*for (Pacientepct nombrePct:pdao.logInPaciente(pac)) {
 						 request.setAttribute("ip", nombrePct.getIdPct());
 						 request.setAttribute("np", nombrePct.getNombresPct());
 						 request.setAttribute("ap", nombrePct.getApellidosPct());
@@ -70,11 +70,13 @@ public class ServeltPaciente extends HttpServlet {
 						 request.setAttribute("cp", nombrePct.getCorreoPct());
 						 
 						 request.getRequestDispatcher("/miPerfilPct.jsp").forward(request,response);
-					 }
+					 }*/
 					 
 					  
 					HttpSession validado = request.getSession(true);
-					validado.setAttribute("correoUser", correo);
+					validado.setAttribute("idUser", pac.getIdPct());
+					
+					response.sendRedirect("miPerfilPct.jsp");
 				}else {
 					System.out.println("Datos invalidos");
 				}

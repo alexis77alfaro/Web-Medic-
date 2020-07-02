@@ -24,6 +24,29 @@ public class PacienteDao {
 			listaPac= em.createQuery("from Pacientepct where correoPct = '"+pa.getCorreoPct()+"' and passPct = '"+pa.getPassPct()+"' ").getResultList();
 			em.getTransaction().commit();
 			
+			for(Pacientepct p:listaPac) {
+				pa.setIdPct(p.getIdPct());
+			}
+		} catch (Exception e) {
+			System.out.println("Ha ocurrido un error: "+e);
+		}
+		
+		return listaPac;
+	}
+	
+	public List<Pacientepct> datosPaciente(String id){
+		List<Pacientepct> listaPac = new ArrayList<>();
+		
+		EntityManager em;
+		EntityManagerFactory emf;
+		emf= Persistence.createEntityManagerFactory("WebMedic");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			listaPac= em.createQuery("from Pacientepct where idPct = '"+ id +"'").getResultList();
+			em.getTransaction().commit();
+			
 		} catch (Exception e) {
 			System.out.println("Ha ocurrido un error: "+e);
 		}
